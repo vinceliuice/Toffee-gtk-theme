@@ -211,7 +211,7 @@ entry {
   border-radius: 2px;
   transition: all 270ms cubic-bezier(0, 0, 0.2, 1), box-shadow 180ms cubic-bezier(0, 0, 0.2, 1);
   border-image: none;
-  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.06), 0 1px 2px rgba(0, 0, 0, 0.12);
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.06), 0 1px 2px rgba(0, 0, 0, 0.1);
   background-color: #3a3a3a;
   color: #FFFFFF;
 }
@@ -224,7 +224,7 @@ entry:focus {
 
 spinbutton:disabled:not(.vertical),
 entry:disabled {
-  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.06), 0 1px 2px rgba(0, 0, 0, 0.12);
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.06), 0 1px 2px rgba(0, 0, 0, 0.1);
   background-color: #363636;
   color: rgba(255, 255, 255, 0.5);
 }
@@ -312,7 +312,7 @@ spinbutton.error:not(.vertical),
 entry.error {
   transition: all 270ms cubic-bezier(0, 0, 0.2, 1), box-shadow 180ms cubic-bezier(0, 0, 0.2, 1);
   border-image: none;
-  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.06), 0 1px 2px rgba(0, 0, 0, 0.12);
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.06), 0 1px 2px rgba(0, 0, 0, 0.1);
   background-color: #DD2C00;
   color: #FFFFFF;
 }
@@ -325,7 +325,7 @@ entry.error:focus {
 
 spinbutton.error:disabled:not(.vertical),
 entry.error:disabled {
-  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.06), 0 1px 2px rgba(0, 0, 0, 0.12);
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.06), 0 1px 2px rgba(0, 0, 0, 0.1);
   background-color: #363636;
   color: rgba(255, 255, 255, 0.5);
 }
@@ -378,7 +378,7 @@ spinbutton.warning:not(.vertical),
 entry.warning {
   transition: all 270ms cubic-bezier(0, 0, 0.2, 1), box-shadow 180ms cubic-bezier(0, 0, 0.2, 1);
   border-image: none;
-  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.06), 0 1px 2px rgba(0, 0, 0, 0.12);
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.06), 0 1px 2px rgba(0, 0, 0, 0.1);
   background-color: #FF6D00;
   color: #FFFFFF;
 }
@@ -391,7 +391,7 @@ entry.warning:focus {
 
 spinbutton.warning:disabled:not(.vertical),
 entry.warning:disabled {
-  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.06), 0 1px 2px rgba(0, 0, 0, 0.12);
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.06), 0 1px 2px rgba(0, 0, 0, 0.1);
   background-color: #363636;
   color: rgba(255, 255, 255, 0.5);
 }
@@ -491,7 +491,7 @@ treeview entry.flat, treeview entry.flat:focus, treeview entry, treeview entry:f
 }
 
 .entry-tag:hover, .documents-entry-tag:hover, .photos-entry-tag:hover {
-  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.06), 0 1px 2px rgba(0, 0, 0, 0.12);
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.06), 0 1px 2px rgba(0, 0, 0, 0.1);
 }
 
 :dir(ltr) .entry-tag, :dir(ltr) .documents-entry-tag, :dir(ltr) .photos-entry-tag {
@@ -537,7 +537,7 @@ button {
   border-radius: 2px;
   font-weight: 500;
   transition: all 270ms cubic-bezier(0, 0, 0.2, 1), box-shadow 180ms cubic-bezier(0, 0, 0.2, 1), background-size 450ms cubic-bezier(0, 0, 0.2, 1), background-image 900ms cubic-bezier(0, 0, 0.2, 1);
-  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.06), 0 1px 2px rgba(0, 0, 0, 0.12), inset 0 0 0 9999px transparent;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.06), 0 1px 2px rgba(0, 0, 0, 0.1), inset 0 0 0 9999px transparent;
   background-color: #414141;
   background-image: radial-gradient(circle farthest-corner at center, transparent 10%, transparent 0%);
   background-repeat: no-repeat;
@@ -1160,7 +1160,7 @@ toolbar.osd, .app-notification, frame.documents-dropdown {
 }
 
 toolbar.osd:backdrop, .app-notification:backdrop, frame.documents-dropdown:backdrop {
-  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.06), 0 1px 2px rgba(0, 0, 0, 0.12), inset 0 1px rgba(255, 255, 255, 0.1);
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.06), 0 1px 2px rgba(0, 0, 0, 0.1), inset 0 1px rgba(255, 255, 255, 0.1);
 }
 
 toolbar.osd.left, .left.app-notification, frame.left.documents-dropdown, toolbar.osd.right, .right.app-notification, frame.right.documents-dropdown, toolbar.osd.top, .top.app-notification, frame.top.documents-dropdown, toolbar.osd.bottom, .bottom.app-notification, frame.bottom.documents-dropdown {
@@ -2125,7 +2125,7 @@ popover.background {
 }
 
 popover.background:backdrop {
-  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.06), 0 1px 2px rgba(0, 0, 0, 0.12);
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.06), 0 1px 2px rgba(0, 0, 0, 0.1);
   color: rgba(255, 255, 255, 0.75);
 }
 
@@ -2662,7 +2662,7 @@ switch slider {
   margin: -4px -2px;
   border-radius: 9999px;
   -gtk-outline-radius: 9999px;
-  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.06), 0 1px 2px rgba(0, 0, 0, 0.12);
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.06), 0 1px 2px rgba(0, 0, 0, 0.1);
   background-color: #3a3a3a;
   color: #FFFFFF;
   background-position: center;
@@ -2703,7 +2703,7 @@ switch:checked:disabled slider {
   box-shadow: none;
   background-color: transparent;
   background-image: none;
-  -gtk-icon-shadow: 0 1px 1px rgba(0, 0, 0, 0.06), 0 1px 2px rgba(0, 0, 0, 0.12);
+  -gtk-icon-shadow: 0 1px 1px rgba(0, 0, 0, 0.06), 0 1px 2px rgba(0, 0, 0, 0.1);
 }
 
 .view.content-view.check:not(list):hover, .view.content-view.check:not(list):active,
@@ -3765,7 +3765,7 @@ levelbar.vertical.discrete block:not(:last-child) {
 levelbar trough {
   padding: 2px;
   border-radius: 2px;
-  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.06), 0 1px 2px rgba(0, 0, 0, 0.12);
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.06), 0 1px 2px rgba(0, 0, 0, 0.1);
   background-color: #3a3a3a;
 }
 
@@ -4440,16 +4440,16 @@ colorswatch:drop(active) {
 }
 
 colorswatch:drop(active).light overlay {
-  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.06), 0 1px 2px rgba(0, 0, 0, 0.12), 0 0 0 2px #5D7DFB;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.06), 0 1px 2px rgba(0, 0, 0, 0.1), 0 0 0 2px #5D7DFB;
 }
 
 colorswatch:drop(active).dark overlay {
-  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.06), 0 1px 2px rgba(0, 0, 0, 0.12), 0 0 0 2px #5D7DFB;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.06), 0 1px 2px rgba(0, 0, 0, 0.1), 0 0 0 2px #5D7DFB;
 }
 
 colorswatch overlay {
   transition: box-shadow 180ms cubic-bezier(0, 0, 0.2, 1);
-  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.06), 0 1px 2px rgba(0, 0, 0, 0.12);
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.06), 0 1px 2px rgba(0, 0, 0, 0.1);
 }
 
 colorswatch overlay:hover {
@@ -4493,7 +4493,7 @@ colorchooser .popover.osd {
 }
 
 colorchooser .popover.osd:backdrop {
-  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.06), 0 1px 2px rgba(0, 0, 0, 0.12), inset 0 1px rgba(255, 255, 255, 0.1);
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.06), 0 1px 2px rgba(0, 0, 0, 0.1), inset 0 1px rgba(255, 255, 255, 0.1);
 }
 
 /********
@@ -4772,7 +4772,7 @@ headerbar,
   margin: -2px 0;
   background-color: #5D7DFB;
   color: #FFFFFF;
-  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.06), 0 1px 2px rgba(0, 0, 0, 0.12);
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.06), 0 1px 2px rgba(0, 0, 0, 0.1);
 }
 
 headerbar.default-decoration button.titlebutton.close:hover, headerbar.default-decoration button.titlebutton.close:active, headerbar.default-decoration button.titlebutton.close:checked,
@@ -4861,7 +4861,7 @@ cursor-handle.insertion-cursor:dir(ltr), cursor-handle.insertion-cursor:dir(rtl)
 
 :not(decoration):not(window):drop(active) {
   transition: all 270ms cubic-bezier(0, 0, 0.2, 1);
-  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.06), 0 1px 2px rgba(0, 0, 0, 0.12), inset 0 0 0 2px #5D7DFB;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.06), 0 1px 2px rgba(0, 0, 0, 0.1), inset 0 0 0 2px #5D7DFB;
   caret-color: #5D7DFB;
 }
 
@@ -4982,7 +4982,7 @@ button.emoji-section:last-child {
 
 .nautilus-desktop.nautilus-canvas-item:not(:selected), .caja-desktop.caja-canvas-item:not(:selected) {
   color: #FFFFFF;
-  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.06), 0 1px 2px rgba(0, 0, 0, 0.12);
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.06), 0 1px 2px rgba(0, 0, 0, 0.1);
 }
 
 @keyframes needs_attention_keyframes {
@@ -5306,7 +5306,7 @@ paned.titlebar.horizontal headerbar {
 .gedit-side-panel-paned.horizontal > box.vertical > stack > grid.horizontal > scrolledwindow {
   margin: 2px 6px 6px;
   border-radius: 2px;
-  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.06), 0 1px 2px rgba(0, 0, 0, 0.12);
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.06), 0 1px 2px rgba(0, 0, 0, 0.1);
 }
 
 .gedit-side-panel-paned.horizontal > box.vertical > stack > grid.horizontal > scrolledwindow row.activatable, .gedit-side-panel-paned.horizontal > box.vertical > stack > grid.horizontal > scrolledwindow .view, .gedit-side-panel-paned.horizontal > box.vertical > stack > grid.horizontal > scrolledwindow treeview.view header button, treeview.view header .gedit-side-panel-paned.horizontal > box.vertical > stack > grid.horizontal > scrolledwindow button, .gedit-side-panel-paned.horizontal > box.vertical > stack > grid.horizontal > scrolledwindow .budgie-menu button, .budgie-menu .gedit-side-panel-paned.horizontal > box.vertical > stack > grid.horizontal > scrolledwindow button {
@@ -6526,7 +6526,7 @@ UnityDecoration .menuitem:hover {
 
 .background:not(.csd) headerbar:not(.titlebar) {
   border-radius: 2px;
-  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.06), 0 1px 2px rgba(0, 0, 0, 0.12);
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.06), 0 1px 2px rgba(0, 0, 0, 0.1);
 }
 
 .background:not(.csd) headerbar:not(.titlebar).inline-toolbar {
