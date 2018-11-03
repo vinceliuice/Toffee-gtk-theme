@@ -2307,6 +2307,26 @@ radiobutton.text-button {
   label:not(:only-child) { margin: 0 4px; }
 }
 
+%row_selected_button,
+checkbutton check,
+radiobutton radio {
+  row &:selected,
+  treeview.view &:selected,
+  row.activatable &:selected {
+    &, &:focus {
+      &, &:active, &:checked, &:indeterminate {
+        color: $inverse_secondary_fg_color;
+        &:disabled { color: $inverse_disabled_secondary_fg_color; }
+      }
+
+      &:hover {
+        color: $inverse_fg_color;
+        &:disabled { color: $inverse_disabled_fg_color; }
+      }
+    }
+  }
+}
+
 check,
 radio {
   min-height: 24px;
@@ -2323,19 +2343,7 @@ radio {
 
   // &:only-child { margin: -12px; }
 
-  row &:selected,
-  treeview.view &:selected,
-  row.activatable &:selected {
-		&, &:focus {
-
-      &, &:active, &:checked, &:indeterminate {
-				color: $inverse_secondary_fg_color;
-				&:disabled { color: $inverse_disabled_secondary_fg_color; }
-			}
-
-      &:hover { color: $inverse_fg_color; }
-		}
-  }
+  @extend %row_selected_button;
 
   popover & {
     &, &:hover, &:disabled {
@@ -2524,18 +2532,12 @@ treeview.view radio {
 
     &:checked:disabled, &:indeterminate:disabled { color: $disabled_accent_color; }
   }
+}
 
-  &:selected {
-    color: $inverse_secondary_fg_color;
-
-    &:hover, &:active { color: $inverse_fg_color; }
-
-    &:disabled { color: $inverse_disabled_secondary_fg_color; }
-
-    &:checked, &:indeterminate { color: $accent_color; }
-
-    &:checked:disabled, &:indeterminate:disabled { color: $disabled_accent_color; }
-  }
+treeview.view check:checked {
+  -gtk-icon-source: image(-gtk-recolor(url("assets/scalable/checkbox-checked-symbolic.svg")),
+                          -gtk-recolor(url("assets/scalable/checkbox-checked-symbolic.symbolic.png")));
+  border-image: none;
 }
 
 treeview.view radio:checked {
@@ -2543,7 +2545,6 @@ treeview.view radio:checked {
                           -gtk-recolor(url("assets/scalable/radio-checked-symbolic.symbolic.png")));
   border-image: none;
 }
-
 
 /************
  * GtkScale *
@@ -3684,73 +3685,6 @@ decoration {
  * Title buttons *
  *****************/
 
-%title_buttons_solid {
-
-  button.titlebutton {
-    @extend %circular_button;
-//    &:hover {
-//      @include button(flat-hover);
-//    }
-//
-//    &:active, &:checked {
-//      @include button(flat-active);
-//    }
-
-    &.close, &.maximize, &.minimize, &.restore {
-      margin: 0 3px;
-      padding: 0;
-      min-width: 14px;
-      min-height: 14px;
-      border-radius: 100px;
-      animation: none;
-      box-shadow: none;
-
-//      &, &:hover, &:active, &:checked {
-//        color: transparent;
-//        background-color: transparent;
-//        background-image: none;
-//      }
-
-      &:backdrop { opacity: 1; }
-    }
-
-    // Load png assets for each button, Fix the Chrome window restore button bug
-    @each $k in ('close', 'maximize', 'minimize', 'restore') {
-      @each $l, $m in ('',''), (':backdrop','-backdrop'), (':hover','-hover'), (':active','-active') {
-
-        &.#{$k}#{$l} {
-          > image {
-            color: transparent;
-            background-color: transparent;
-            background-position: center;
-            background-repeat: no-repeat;
-            background-image: -gtk-scaled(url('assets/titlebutton-#{$k}#{$m}.png'),
-                                          url('assets/titlebutton-#{$k}#{$m}@2.png'));
-          }
-        }
-      }
-    }
-  }
-
-  .fullscreen &,
-  .maximized & {
-    button.titlebutton {
-      @each $l, $m in ('',''), (':backdrop','-backdrop'), (':hover','-hover'), (':active','-active') {
-      &.maximize#{$l} {
-        > image {
-          color: transparent;
-          background-color: transparent;
-          background-position: center;
-          background-repeat: no-repeat;
-          background-image: -gtk-scaled(url('assets/titlebutton-restore#{$m}.png'),
-                                        url('assets/titlebutton-restore#{$m}@2.png'));
-          }
-        }
-      }
-    }
-  }
-}
-
 headerbar,
 .titlebar {
   padding: 0 14px;
@@ -3789,23 +3723,23 @@ headerbar,
 
       @at-root %windows_close_button,
       &.close { // Window Close button
-			  transition: background-size 0, background-image 0, $shadow_transition;
+		transition: background-size 0, background-image 0, $shadow_transition;
 
         &:hover {
-					padding: 2px;
+		  padding: 2px;
           margin: -2px 0;
-					background-color: $red_400;
+		  background-color: $red_400;
           color: $inverse_secondary_fg_color;
-					box-shadow: $shadow_2;
-				}
+		  box-shadow: $shadow_2;
+       }
 
         &:active, &:checked {
-					padding: 2px;
+          padding: 2px;
           margin: -2px 0;
-					background-color: $accent_color;
+          background-color: $accent_color;
           color: $inverse_fg_color;
-					box-shadow: $shadow_1;
-				}
+          box-shadow: $shadow_1;
+        }
       }
     }
   }
