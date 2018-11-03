@@ -242,8 +242,8 @@ dialog.background > box.dialog-vbox.vertical > grid.horizontal {
   &.maximized placessidebar.sidebar { background-color: $sidebar_bg_color; }
 
   placessidebar {
-//		list { @extend %sidebar_template; } // draw shadows
-	}
+//    list { @extend %sidebar_template; } // draw shadows
+  }
 
   placessidebar.sidebar {
     background-color: transparent;
@@ -273,7 +273,7 @@ dialog.background > box.dialog-vbox.vertical > grid.horizontal {
 
       &:selected {
         background-color: transparent;
-				font-weight: bold;
+        font-weight: bold;
 
         &:active { box-shadow: none; }
       }

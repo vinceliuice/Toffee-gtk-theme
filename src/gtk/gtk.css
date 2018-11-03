@@ -2163,6 +2163,10 @@ popover.background list, popover.background row, popover.background .view {
   border-color: rgba(255, 255, 255, 0.12);
 }
 
+popover.background treeview.view header button {
+  border-color: rgba(255, 255, 255, 0.12);
+}
+
 popover.background scrolledwindow {
   border-color: rgba(255, 255, 255, 0.12);
 }
@@ -4136,12 +4140,12 @@ stacksidebar .frame list:dir(rtl) {
 }
 
 stacksidebar.sidebar:dir(ltr) list, stacksidebar.sidebar.left list, stacksidebar.sidebar.left:dir(rtl) list, .sidebar:dir(ltr), .sidebar.left, .sidebar.left:dir(rtl) {
-  border-right: 0 solid #e1e1e1;
+  border-right: 1px solid #e1e1e1;
   border-left-style: none;
 }
 
 stacksidebar.sidebar:dir(rtl) list, stacksidebar.sidebar.right list, .sidebar:dir(rtl), .sidebar.right {
-  border-left: 0 solid #e1e1e1;
+  border-left: 1px solid #e1e1e1;
   border-right-style: none;
 }
 

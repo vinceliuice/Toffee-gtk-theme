@@ -1226,7 +1226,7 @@ headerbar {
     .fullscreen & { box-shadow: none; }
 
     button.titlebutton {
-			@extend %circular_button;
+      @extend %circular_button;
       min-height: 16px;
       min-width: 16px;
       margin: 0 2px;
@@ -1698,6 +1698,7 @@ $popover_border: rgba($white, 0.12);
   color: $popover_fg;
   background-color: transparent;
   box-shadow: none;
+
   &:hover {
     transition: none;
     color: $inverse_fg_color;
@@ -1761,6 +1762,8 @@ popover.background {
     background-color: transparent;
     border-color: $popover_border;
   }
+
+  treeview.view header button { border-color: $popover_border; }
 
   scrolledwindow { border-color: $popover_border; }
 
@@ -3195,14 +3198,14 @@ filechooserbutton:drop(active) {
   &:dir(ltr),
   &.left,
   &.left:dir(rtl) {
-    border-right: 0 solid $solid_border_color;
+    border-right: 1px solid $solid_border_color;
     border-left-style: none;
   }
 
   @at-root %sidebar_right,
   &:dir(rtl),
   &.right {
-    border-left: 0 solid $solid_border_color;
+    border-left: 1px solid $solid_border_color;
     border-right-style: none;
   }
 
@@ -3723,14 +3726,14 @@ headerbar,
 
       @at-root %windows_close_button,
       &.close { // Window Close button
-		transition: background-size 0, background-image 0, $shadow_transition;
+        transition: background-size 0, background-image 0, $shadow_transition;
 
         &:hover {
-		  padding: 2px;
+          padding: 2px;
           margin: -2px 0;
-		  background-color: $red_400;
+          background-color: $red_400;
           color: $inverse_secondary_fg_color;
-		  box-shadow: $shadow_2;
+          box-shadow: $shadow_2;
        }
 
         &:active, &:checked {
@@ -3749,20 +3752,20 @@ headerbar,
     button.titlebutton {
       &.close { // Reset Close button
         &:hover, &:active, &:checked {
-					padding: 0;
+          padding: 0;
           margin: 0 2px;
-					box-shadow: none;
-				}
+          box-shadow: none;
+        }
       }
-		}
-	}
+    }
+  }
 }
 
 // solid-csd Window manager buttons
 //.csd headerbar:not(.default-decoration),
 .solid-csd headerbar:not(.default-decoration) {
   button.titlebutton {
-		@extend %circular_button;
+    @extend %circular_button;
     &.close, &.maximize, &.minimize { @extend %windows_button; }
     &.close { @extend %windows_close_button; }
   }
