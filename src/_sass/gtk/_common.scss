@@ -1551,10 +1551,10 @@ menubar,
     color: $titlebar_secondary_fg_color;
 
     menu {
-      border-radius: 0 0 $buttons_radius $buttons_radius;
+      border-radius: 0 0 $menu_radius $menu_radius;
 
       menu { //submenu
-        border-radius: $buttons_radius;
+        border-radius: $menu_radius;
       }
     }
 
@@ -1581,7 +1581,7 @@ menu,
   box-shadow: inset 0 1px $highlight_color;
   background-color: rgba($menu_bg_color, 1);
   border: 1px solid $border_color; // adds borders in a non composited env
-  border-radius: $buttons_radius;
+  border-radius: $menu_radius;
 
   .csd & {
     border: none; // axes borders in a composited env
@@ -3656,8 +3656,8 @@ decoration {
   // server-side decorations as used by mutter
   .ssd & { box-shadow: 0 3px 3px rgba(0, 0, 0, 0.16); } // just doing borders, wm draws actual shadows
 
-  .csd.popup & {
-    border-radius: $buttons_radius;
+  .csd.popup & { // Menu shadow
+    border-radius: $menu_radius;
     box-shadow: $shadow_2;
   }
 

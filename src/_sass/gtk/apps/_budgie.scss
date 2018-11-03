@@ -376,9 +376,9 @@ popover.background.places-menu {
       &:hover { color: $inverse_fg_color; }
       &:disabled { color: $inverse_disabled_secondary_fg_color; }
       menu {
-        border-radius: 0 0 $buttons_radius $buttons_radius;
+        border-radius: 0 0 $menu_radius $menu_radius;
         menu { //submenu
-          border-radius: $buttons_radius;
+          border-radius: $menu_radius;
         }
       }
     }
