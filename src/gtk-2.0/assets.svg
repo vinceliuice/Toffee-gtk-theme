@@ -30,10 +30,10 @@
      showgrid="true"
      id="namedview4"
      inkscape:zoom="19.209734"
-     inkscape:cx="141.54382"
-     inkscape:cy="54.873215"
+     inkscape:cx="130.14335"
+     inkscape:cy="54.664987"
      inkscape:window-width="1920"
-     inkscape:window-height="1021"
+     inkscape:window-height="1009"
      inkscape:window-x="0"
      inkscape:window-y="0"
      inkscape:window-maximized="1"
@@ -88,19 +88,19 @@
     <linearGradient
        id="color-primary">
       <stop
-         stop-color="#00CE99"
+         stop-color="#5D7DFB"
          id="stop23" />
     </linearGradient>
     <linearGradient
        id="color-accent">
       <stop
-         stop-color="#FFAC00"
+         stop-color="#5D7DFB"
          id="stop26" />
     </linearGradient>
     <linearGradient
        id="color-accent-insensitive">
       <stop
-         stop-color="#FFAC00"
+         stop-color="#5D7DFB"
          stop-opacity="0.5"
          id="stop29" />
     </linearGradient>
@@ -1102,6 +1102,24 @@
        xlink:href="#base-treeview-ltr-button-active"
        id="base-treeview-rtl-button-active"
        transform="scale(-1 1)" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#color-primary"
+       id="linearGradient1250"
+       x1="132"
+       y1="430"
+       x2="144"
+       y2="430"
+       gradientUnits="userSpaceOnUse" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#color-primary"
+       id="linearGradient1266"
+       x1="132"
+       y1="424"
+       x2="144"
+       y2="424"
+       gradientUnits="userSpaceOnUse" />
   </defs>
   <use
      x="8"
@@ -1955,7 +1973,7 @@
      xlink:href="#base-treeview-rtl-button-active"
      id="treeview-rtl-button-active" />
   <rect
-     style="opacity:0.5;fill:#ffac00;fill-opacity:1;stroke:none;stroke-width:0.81649661;stroke-opacity:1"
+     style="opacity:0.5;fill-opacity:1.0;stroke:none;stroke-width:0.81649661;stroke-opacity:1;fill:url(#linearGradient1266)"
      id="pathbar_button_prelight"
      width="12"
      height="2"
@@ -1972,6 +1990,6 @@
      height="2"
      width="12"
      id="pathbar_button_active"
-     style="opacity:1;fill:#ffac00;fill-opacity:1;stroke:none;stroke-width:0.81649661;stroke-opacity:1"
+     style="opacity:1;fill-opacity:1.0;stroke:none;stroke-width:0.81649661;stroke-opacity:1;fill:url(#linearGradient1250)"
      inkscape:label="#rect5320" />
 </svg>
