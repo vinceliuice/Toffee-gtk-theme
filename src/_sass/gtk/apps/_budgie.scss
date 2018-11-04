@@ -51,7 +51,7 @@
 }
 
 .budgie-popover {
-  border-color: $lighter_bg_color;
+  border-color: rgba($lighter_bg_color, 0.95);
   border-radius: $material_radius + 1px;
   box-shadow: $shadow_2;
   background-color: rgba($lighter_bg_color, 0.95);
