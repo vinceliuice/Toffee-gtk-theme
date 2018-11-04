@@ -51,10 +51,10 @@
 }
 
 .budgie-popover {
-  border-color: rgba($lighter_bg_color, 0.95);
+  border-color: rgba($lighter_bg_color, 1);
   border-radius: $material_radius + 1px;
   box-shadow: $shadow_2;
-  background-color: rgba($lighter_bg_color, 0.95);
+  background-color: rgba($menu_bg_color, 1);
 
   .container { padding: 2px; }
 
@@ -558,7 +558,7 @@ $pos_list: ((top, bottom), (bottom, top), (left, right), (right, left));
 
 // Raven
 .raven {
-  background-color: rgba($lighter_bg_color, 0.95);
+  background-color: rgba($bg_color, 1);
 
   // for >=10.4
   > box { margin-bottom: -10px; }
