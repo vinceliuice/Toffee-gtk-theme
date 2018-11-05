@@ -173,7 +173,10 @@ assistant .sidebar label.highlight {
   color: #FFFFFF;
 }
 
-popover.background.touch-selection, popover.background.magnifier, popover.background.osd, .app-notification, .osd .scale-popup, .nautilus-window .floating-bar, .osd {
+popover.touch-selection, popover.magnifier, popover.osd,
+popover.background.touch-selection,
+popover.background.magnifier,
+popover.background.osd, .app-notification, .osd .scale-popup, .nautilus-window .floating-bar, .osd {
   opacity: 0.9;
 }
 
@@ -229,7 +232,8 @@ entry:disabled {
   color: rgba(255, 255, 255, 0.5);
 }
 
-spinbutton.flat:not(.vertical), popover.background entry, notebook > stack:not(:only-child) entry:not(.search),
+spinbutton.flat:not(.vertical), popover entry,
+popover.background entry, notebook > stack:not(:only-child) entry:not(.search),
 notebook > stack:not(:only-child) spinbutton:not(.vertical), messagedialog entry, colorchooser .popover.osd spinbutton:not(.vertical), entry.preferences-search, layoutpane entry.search, editortweak entry.search, window#whiskermenu-window entry, .budgie-popover entry,
 .budgie-popover spinbutton:not(.vertical), .raven .raven-background spinbutton:not(.vertical), #login_window entry,
 entry.flat {
@@ -241,7 +245,7 @@ entry.flat {
   color: #FFFFFF;
 }
 
-spinbutton.flat:focus:not(.vertical), popover.background entry:focus, notebook > stack:not(:only-child) entry:focus:not(.search),
+spinbutton.flat:focus:not(.vertical), popover entry:focus, notebook > stack:not(:only-child) entry:focus:not(.search),
 notebook > stack:not(:only-child) spinbutton:focus:not(.vertical), messagedialog entry:focus, colorchooser .popover.osd spinbutton:focus:not(.vertical), entry.preferences-search:focus, layoutpane entry.search:focus, editortweak entry.search:focus, window#whiskermenu-window entry:focus, .budgie-popover entry:focus,
 .budgie-popover spinbutton:focus:not(.vertical), .raven .raven-background spinbutton:focus:not(.vertical), #login_window entry:focus,
 entry.flat:focus {
@@ -249,7 +253,7 @@ entry.flat:focus {
   box-shadow: inset 0 -1px rgba(255, 255, 255, 0.3);
 }
 
-spinbutton.flat:disabled:not(.vertical), popover.background entry:disabled, notebook > stack:not(:only-child) entry:disabled:not(.search),
+spinbutton.flat:disabled:not(.vertical), popover entry:disabled, notebook > stack:not(:only-child) entry:disabled:not(.search),
 notebook > stack:not(:only-child) spinbutton:disabled:not(.vertical), messagedialog entry:disabled, colorchooser .popover.osd spinbutton:disabled:not(.vertical), entry.preferences-search:disabled, layoutpane entry.search:disabled, editortweak entry.search:disabled, window#whiskermenu-window entry:disabled, .budgie-popover entry:disabled,
 .budgie-popover spinbutton:disabled:not(.vertical), .raven .raven-background spinbutton:disabled:not(.vertical), #login_window entry:disabled,
 entry.flat:disabled {
@@ -330,7 +334,7 @@ entry.error:disabled {
   color: rgba(255, 255, 255, 0.5);
 }
 
-spinbutton.error.flat:not(.vertical), popover.background entry.error, notebook > stack:not(:only-child) entry.error:not(.search),
+spinbutton.error.flat:not(.vertical), popover entry.error, notebook > stack:not(:only-child) entry.error:not(.search),
 notebook > stack:not(:only-child) spinbutton.error:not(.vertical), messagedialog entry.error, colorchooser .popover.osd spinbutton.error:not(.vertical), entry.error.preferences-search, layoutpane entry.error.search, editortweak entry.error.search, window#whiskermenu-window entry.error, .budgie-popover entry.error,
 .budgie-popover spinbutton.error:not(.vertical), .raven .raven-background spinbutton.error:not(.vertical), #login_window entry.error,
 entry.error.flat {
@@ -341,7 +345,7 @@ entry.error.flat {
   color: #FFFFFF;
 }
 
-spinbutton.error.flat:focus:not(.vertical), popover.background entry.error:focus, notebook > stack:not(:only-child) entry.error:focus:not(.search),
+spinbutton.error.flat:focus:not(.vertical), popover entry.error:focus, notebook > stack:not(:only-child) entry.error:focus:not(.search),
 notebook > stack:not(:only-child) spinbutton.error:focus:not(.vertical), messagedialog entry.error:focus, colorchooser .popover.osd spinbutton.error:focus:not(.vertical), entry.error.preferences-search:focus, layoutpane entry.error.search:focus, editortweak entry.error.search:focus, window#whiskermenu-window entry.error:focus, .budgie-popover entry.error:focus,
 .budgie-popover spinbutton.error:focus:not(.vertical), .raven .raven-background spinbutton.error:focus:not(.vertical), #login_window entry.error:focus,
 entry.error.flat:focus {
@@ -349,7 +353,7 @@ entry.error.flat:focus {
   box-shadow: inset 0 -1px #DD2C00;
 }
 
-spinbutton.error.flat:disabled:not(.vertical), popover.background entry.error:disabled, notebook > stack:not(:only-child) entry.error:disabled:not(.search),
+spinbutton.error.flat:disabled:not(.vertical), popover entry.error:disabled, notebook > stack:not(:only-child) entry.error:disabled:not(.search),
 notebook > stack:not(:only-child) spinbutton.error:disabled:not(.vertical), messagedialog entry.error:disabled, colorchooser .popover.osd spinbutton.error:disabled:not(.vertical), entry.error.preferences-search:disabled, layoutpane entry.error.search:disabled, editortweak entry.error.search:disabled, window#whiskermenu-window entry.error:disabled, .budgie-popover entry.error:disabled,
 .budgie-popover spinbutton.error:disabled:not(.vertical), .raven .raven-background spinbutton.error:disabled:not(.vertical), #login_window entry.error:disabled,
 entry.error.flat:disabled {
@@ -396,7 +400,7 @@ entry.warning:disabled {
   color: rgba(255, 255, 255, 0.5);
 }
 
-spinbutton.warning.flat:not(.vertical), popover.background entry.warning, notebook > stack:not(:only-child) entry.warning:not(.search),
+spinbutton.warning.flat:not(.vertical), popover entry.warning, notebook > stack:not(:only-child) entry.warning:not(.search),
 notebook > stack:not(:only-child) spinbutton.warning:not(.vertical), messagedialog entry.warning, colorchooser .popover.osd spinbutton.warning:not(.vertical), entry.warning.preferences-search, layoutpane entry.warning.search, editortweak entry.warning.search, window#whiskermenu-window entry.warning, .budgie-popover entry.warning,
 .budgie-popover spinbutton.warning:not(.vertical), .raven .raven-background spinbutton.warning:not(.vertical), #login_window entry.warning,
 entry.warning.flat {
@@ -407,7 +411,7 @@ entry.warning.flat {
   color: #FFFFFF;
 }
 
-spinbutton.warning.flat:focus:not(.vertical), popover.background entry.warning:focus, notebook > stack:not(:only-child) entry.warning:focus:not(.search),
+spinbutton.warning.flat:focus:not(.vertical), popover entry.warning:focus, notebook > stack:not(:only-child) entry.warning:focus:not(.search),
 notebook > stack:not(:only-child) spinbutton.warning:focus:not(.vertical), messagedialog entry.warning:focus, colorchooser .popover.osd spinbutton.warning:focus:not(.vertical), entry.warning.preferences-search:focus, layoutpane entry.warning.search:focus, editortweak entry.warning.search:focus, window#whiskermenu-window entry.warning:focus, .budgie-popover entry.warning:focus,
 .budgie-popover spinbutton.warning:focus:not(.vertical), .raven .raven-background spinbutton.warning:focus:not(.vertical), #login_window entry.warning:focus,
 entry.warning.flat:focus {
@@ -415,7 +419,7 @@ entry.warning.flat:focus {
   box-shadow: inset 0 -1px #FF6D00;
 }
 
-spinbutton.warning.flat:disabled:not(.vertical), popover.background entry.warning:disabled, notebook > stack:not(:only-child) entry.warning:disabled:not(.search),
+spinbutton.warning.flat:disabled:not(.vertical), popover entry.warning:disabled, notebook > stack:not(:only-child) entry.warning:disabled:not(.search),
 notebook > stack:not(:only-child) spinbutton.warning:disabled:not(.vertical), messagedialog entry.warning:disabled, colorchooser .popover.osd spinbutton.warning:disabled:not(.vertical), entry.warning.preferences-search:disabled, layoutpane entry.warning.search:disabled, editortweak entry.warning.search:disabled, window#whiskermenu-window entry.warning:disabled, .budgie-popover entry.warning:disabled,
 .budgie-popover spinbutton.warning:disabled:not(.vertical), .raven .raven-background spinbutton.warning:disabled:not(.vertical), #login_window entry.warning:disabled,
 entry.warning.flat:disabled {
@@ -447,11 +451,11 @@ entry progress {
   background-color: transparent;
 }
 
-.linked:not(.vertical) > spinbutton.flat:not(.vertical), popover.background .linked:not(.vertical) > entry, notebook > stack:not(:only-child) .linked:not(.vertical) > entry:not(.search),
+.linked:not(.vertical) > spinbutton.flat:not(.vertical), popover .linked:not(.vertical) > entry, notebook > stack:not(:only-child) .linked:not(.vertical) > entry:not(.search),
 notebook > stack:not(:only-child) .linked:not(.vertical) > spinbutton:not(.vertical), messagedialog .linked:not(.vertical) > entry, colorchooser .popover.osd .linked:not(.vertical) > spinbutton:not(.vertical), .linked:not(.vertical) > entry.preferences-search, layoutpane .linked:not(.vertical) > entry.search, editortweak .linked:not(.vertical) > entry.search, window#whiskermenu-window .linked:not(.vertical) > entry, .budgie-popover .linked:not(.vertical) > entry,
 .budgie-popover .linked:not(.vertical) > spinbutton:not(.vertical), .raven .raven-background .linked:not(.vertical) > spinbutton:not(.vertical), #login_window .linked:not(.vertical) > entry,
 .linked.vertical > spinbutton.flat:not(.vertical),
-popover.background .linked.vertical > entry,
+popover .linked.vertical > entry,
 notebook > stack:not(:only-child) .linked.vertical > entry:not(.search),
 notebook > stack:not(:only-child) .linked.vertical > spinbutton:not(.vertical),
 messagedialog .linked.vertical > entry,
@@ -1114,6 +1118,7 @@ combobox:drop(active) {
   box-shadow: none;
 }
 
+popover button.combo,
 popover.background button.combo, notebook > stack:not(:only-child) button.combo, .budgie-popover button.combo, .raven .raven-background button.combo, #login_window #user_combobox button {
   border-radius: 0;
   background-image: none;
@@ -1125,15 +1130,15 @@ popover.background button.combo, notebook > stack:not(:only-child) button.combo,
   color: #FFFFFF;
 }
 
-popover.background button.combo:hover, notebook > stack:not(:only-child) button.combo:hover, .budgie-popover button.combo:hover, .raven .raven-background button.combo:hover, #login_window #user_combobox button:hover {
+popover button.combo:hover, notebook > stack:not(:only-child) button.combo:hover, .budgie-popover button.combo:hover, .raven .raven-background button.combo:hover, #login_window #user_combobox button:hover {
   box-shadow: inset 0 -2px rgba(255, 255, 255, 0.5);
 }
 
-popover.background button.combo:checked, notebook > stack:not(:only-child) button.combo:checked, .budgie-popover button.combo:checked, .raven .raven-background button.combo:checked, #login_window #user_combobox button:checked {
+popover button.combo:checked, notebook > stack:not(:only-child) button.combo:checked, .budgie-popover button.combo:checked, .raven .raven-background button.combo:checked, #login_window #user_combobox button:checked {
   border-image: radial-gradient(circle closest-corner at center calc(100% - 1px), #5D7DFB 100%, transparent 0%) 0 0 2/0 0 2px;
 }
 
-popover.background button.combo:disabled, notebook > stack:not(:only-child) button.combo:disabled, .budgie-popover button.combo:disabled, .raven .raven-background button.combo:disabled, #login_window #user_combobox button:disabled {
+popover button.combo:disabled, notebook > stack:not(:only-child) button.combo:disabled, .budgie-popover button.combo:disabled, .raven .raven-background button.combo:disabled, #login_window #user_combobox button:disabled {
   box-shadow: inset 0 -1px rgba(255, 255, 255, 0.12);
   color: rgba(255, 255, 255, 0.5);
 }
@@ -2064,27 +2069,64 @@ menuitem accelerator {
 /************
  * Popovers *
  ************/
-popover.background button.combo, popover.background button:not(.suggested-action):not(.destructive-action), popover.background menuitem.button.flat, popover.background modelbutton.flat {
+popover button.combo,
+popover.background button.combo, popover button,
+popover.background button {
   color: rgba(255, 255, 255, 0.7);
   background-color: transparent;
   box-shadow: none;
 }
 
-popover.background button.combo:hover, popover.background button:hover:not(.suggested-action):not(.destructive-action), popover.background menuitem.button.flat:hover, popover.background modelbutton.flat:hover {
+popover button:hover {
   transition: none;
   color: #FFFFFF;
-  background-color: rgba(255, 255, 255, 0.15);
+  background-color: rgba(255, 255, 255, 0.12);
 }
 
-popover.background button.combo:checked, popover.background button:checked:not(.suggested-action):not(.destructive-action), popover.background menuitem.button.flat:checked, popover.background modelbutton.flat:checked, popover.background button.combo:active, popover.background button:active:not(.suggested-action):not(.destructive-action), popover.background menuitem.button.flat:active, popover.background modelbutton.flat:active {
+popover button:checked, popover button:active {
   background-color: #5D7DFB;
   color: #FFFFFF;
 }
 
-popover.background button.combo:disabled, popover.background button:disabled:not(.suggested-action):not(.destructive-action), popover.background menuitem.button.flat:disabled, popover.background modelbutton.flat:disabled, popover.background button.combo:checked:disabled, popover.background button:checked:disabled:not(.suggested-action):not(.destructive-action), popover.background menuitem.button.flat:checked:disabled, popover.background modelbutton.flat:checked:disabled {
+popover button:disabled {
   color: rgba(255, 255, 255, 0.3);
+  background-color: transparent;
 }
 
+popover button:checked:disabled {
+  color: rgba(255, 255, 255, 0.3);
+  background-color: rgba(93, 125, 251, 0.5);
+}
+
+popover button.flat, popover modelbutton.flat,
+popover menuitem.button.flat,
+popover.background modelbutton.flat,
+popover.background menuitem.button.flat {
+  color: rgba(255, 255, 255, 0.7);
+  background-color: transparent;
+}
+
+popover button.flat:hover, popover modelbutton.flat:hover,
+popover menuitem.button.flat:hover {
+  box-shadow: inset 0 0 0 9999px rgba(255, 255, 255, 0.12);
+  color: #FFFFFF;
+}
+
+popover button.flat:checked, popover modelbutton.flat:checked,
+popover menuitem.button.flat:checked, popover button.flat:active, popover modelbutton.flat:active,
+popover menuitem.button.flat:active {
+  color: #FFFFFF;
+  box-shadow: inset 0 0 0 9999px rgba(255, 255, 255, 0.12);
+  background-image: radial-gradient(circle farthest-corner at center, rgba(255, 255, 255, 0.12) 10%, transparent 0%);
+}
+
+popover button.flat:disabled, popover modelbutton.flat:disabled,
+popover menuitem.button.flat:disabled {
+  color: rgba(255, 255, 255, 0.3);
+  background-color: transparent;
+}
+
+popover entry,
 popover.background entry {
   border-radius: 0;
   transition: all 270ms cubic-bezier(0, 0, 0.2, 1);
@@ -2094,28 +2136,30 @@ popover.background entry {
   color: #FFFFFF;
 }
 
-popover.background entry:focus {
+popover entry:focus {
   border-image: radial-gradient(circle closest-corner at center calc(100% - 1px), #5D7DFB 100%, transparent 0%) 0 0 2/0 0 2px;
   box-shadow: inset 0 -1px rgba(255, 255, 255, 0.3);
 }
 
-popover.background entry:disabled {
+popover entry:disabled {
   box-shadow: inset 0 -1px rgba(255, 255, 255, 0.12);
   background-color: transparent;
 }
 
-popover.background entry, popover.background entry label, popover.background entry image {
+popover entry,
+popover.background entry, popover entry label, popover.background entry label, popover entry image, popover.background entry image {
   color: rgba(255, 255, 255, 0.7);
 }
 
-popover.background entry:focus, popover.background entry label:focus, popover.background entry image:focus {
+popover entry:focus, popover entry label:focus, popover entry image:focus {
   color: #FFFFFF;
 }
 
-popover.background entry:disabled, popover.background entry label:disabled, popover.background entry image:disabled {
+popover entry:disabled, popover entry label:disabled, popover entry image:disabled {
   color: rgba(255, 255, 255, 0.3);
 }
 
+popover,
 popover.background {
   transition: box-shadow 180ms cubic-bezier(0, 0, 0.2, 1);
   padding: 2px;
@@ -2124,31 +2168,42 @@ popover.background {
   color: rgba(255, 255, 255, 0.7);
 }
 
+popover:backdrop,
 popover.background:backdrop {
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.06), 0 1px 2px rgba(0, 0, 0, 0.1);
   color: rgba(255, 255, 255, 0.75);
 }
 
+popover:disabled,
 popover.background:disabled {
   color: rgba(255, 255, 255, 0.3);
 }
 
-popover.background image:disabled, popover.background label:disabled {
+popover image:disabled, popover label:disabled,
+popover.background image:disabled,
+popover.background label:disabled {
   color: rgba(255, 255, 255, 0.3);
 }
 
-popover.background, .csd popover.background {
+popover, .csd popover,
+popover.background, .csd
+popover.background {
   border-radius: 3px;
 }
 
+popover > stack,
 popover.background > stack {
   margin: -4px;
 }
 
+popover > toolbar,
 popover.background > toolbar {
   margin: -2px;
 }
 
+popover > list,
+popover > .view,
+popover > toolbar,
 popover.background > list,
 popover.background > .view,
 popover.background > toolbar {
@@ -2157,100 +2212,231 @@ popover.background > toolbar {
   background-color: transparent;
 }
 
-popover.background list, popover.background row, popover.background .view {
+popover list, popover row, popover .view,
+popover.background list,
+popover.background row,
+popover.background .view {
   color: rgba(255, 255, 255, 0.7);
   background-color: transparent;
   border-color: rgba(255, 255, 255, 0.12);
 }
 
+popover treeview.view header button,
 popover.background treeview.view header button {
   border-color: rgba(255, 255, 255, 0.12);
 }
 
+popover scrolledwindow,
 popover.background scrolledwindow {
   border-color: rgba(255, 255, 255, 0.12);
 }
 
+popover scrollbar,
 popover.background scrollbar {
   background-color: rgba(52, 52, 52, 0.65);
   border-color: rgba(255, 255, 255, 0.12);
 }
 
+popover scrollbar slider,
 popover.background scrollbar slider {
   background-color: rgba(255, 255, 255, 0.5);
 }
 
+popover scrollbar slider:hover,
 popover.background scrollbar slider:hover {
   background-color: rgba(255, 255, 255, 0.7);
 }
 
+popover scrollbar slider:active,
 popover.background scrollbar slider:active {
   background-color: #FFFFFF;
 }
 
+popover scrollbar slider:disabled,
 popover.background scrollbar slider:disabled {
   background-color: rgba(255, 255, 255, 0.3);
 }
 
+popover scrollbar.overlay-indicator:not(.dragging):not(.hovering) slider,
 popover.background scrollbar.overlay-indicator:not(.dragging):not(.hovering) slider {
   border: 1px solid rgba(52, 52, 52, 0.3);
 }
 
+popover scrollbar.overlay-indicator:not(.dragging):not(.hovering) button,
 popover.background scrollbar.overlay-indicator:not(.dragging):not(.hovering) button {
   border: 1px solid rgba(52, 52, 52, 0.3);
   background-color: rgba(255, 255, 255, 0.5);
 }
 
+popover scrollbar.overlay-indicator:not(.dragging):not(.hovering) button:disabled,
 popover.background scrollbar.overlay-indicator:not(.dragging):not(.hovering) button:disabled {
   background-color: rgba(255, 255, 255, 0.3);
 }
 
-popover.background scrollbar.overlay-indicator.dragging, popover.background scrollbar.overlay-indicator.hovering {
+popover scrollbar.overlay-indicator.dragging, popover scrollbar.overlay-indicator.hovering,
+popover.background scrollbar.overlay-indicator.dragging,
+popover.background scrollbar.overlay-indicator.hovering {
   background-color: rgba(52, 52, 52, 0.9);
 }
 
-popover.background.menu button, popover.background button.model {
+popover.menu button, popover button.model,
+popover.background.menu button,
+popover.background button.model {
   border-radius: 2px;
 }
 
-popover.background check, popover.background radio {
+popover button.suggested-action,
+popover.background button.suggested-action {
+  background-color: #5D7DFB;
+  color: #FFFFFF;
+}
+
+popover button.suggested-action:disabled,
+popover.background button.suggested-action:disabled {
+  color: rgba(255, 255, 255, 0.5);
+  background-color: rgba(93, 125, 251, 0.5);
+}
+
+popover button.suggested-action:hover,
+popover.background button.suggested-action:hover {
+  color: #FFFFFF;
+  background-color: #7691fc;
+}
+
+popover button.suggested-action:checked,
+popover.background button.suggested-action:checked {
+  background-color: #8ea4fc;
+}
+
+popover button.suggested-action.flat,
+popover.background button.suggested-action.flat {
+  background-color: transparent;
+  color: #5D7DFB;
+}
+
+popover button.suggested-action.flat:hover,
+popover.background button.suggested-action.flat:hover {
+  color: #5D7DFB;
+  background-color: rgba(93, 125, 251, 0.15);
+}
+
+popover button.suggested-action.flat:disabled,
+popover.background button.suggested-action.flat:disabled {
+  background-color: transparent;
+  color: rgba(93, 125, 251, 0.5);
+}
+
+popover button.suggested-action.flat:checked,
+popover.background button.suggested-action.flat:checked {
+  background-color: rgba(93, 125, 251, 0.3);
+}
+
+popover button.destructive-action,
+popover.background button.destructive-action {
+  background-color: #FF5252;
+  color: #FFFFFF;
+}
+
+popover button.destructive-action:disabled,
+popover.background button.destructive-action:disabled {
+  color: rgba(255, 255, 255, 0.5);
+  background-color: rgba(255, 82, 82, 0.5);
+}
+
+popover button.destructive-action:hover,
+popover.background button.destructive-action:hover {
+  color: #FFFFFF;
+  background-color: #ff6c6c;
+}
+
+popover button.destructive-action:checked,
+popover.background button.destructive-action:checked {
+  background-color: #ff8686;
+}
+
+popover button.destructive-action.flat,
+popover.background button.destructive-action.flat {
+  background-color: transparent;
+  color: #FF5252;
+}
+
+popover button.destructive-action.flat:hover,
+popover.background button.destructive-action.flat:hover {
+  color: #FF5252;
+  background-color: rgba(255, 82, 82, 0.15);
+}
+
+popover button.destructive-action.flat:disabled,
+popover.background button.destructive-action.flat:disabled {
+  background-color: transparent;
+  color: rgba(255, 82, 82, 0.5);
+}
+
+popover button.destructive-action.flat:checked,
+popover.background button.destructive-action.flat:checked {
+  background-color: rgba(255, 82, 82, 0.3);
+}
+
+popover check, popover radio,
+popover.background check,
+popover.background radio {
   color: rgba(255, 255, 255, 0.7);
   transition: none;
   animation: none;
 }
 
-popover.background check:hover, popover.background radio:hover {
+popover check:hover, popover radio:hover,
+popover.background check:hover,
+popover.background radio:hover {
   color: #FFFFFF;
 }
 
-popover.background check:disabled, popover.background radio:disabled {
+popover check:disabled, popover radio:disabled,
+popover.background check:disabled,
+popover.background radio:disabled {
   color: rgba(255, 255, 255, 0.3);
 }
 
-popover.background check:checked, popover.background check:indeterminate, popover.background radio:checked, popover.background radio:indeterminate {
+popover check:checked, popover check:indeterminate, popover radio:checked, popover radio:indeterminate,
+popover.background check:checked,
+popover.background check:indeterminate,
+popover.background radio:checked,
+popover.background radio:indeterminate {
   color: #5D7DFB;
 }
 
-popover.background check:checked:disabled, popover.background check:indeterminate:disabled, popover.background radio:checked:disabled, popover.background radio:indeterminate:disabled {
+popover check:checked:disabled, popover check:indeterminate:disabled, popover radio:checked:disabled, popover radio:indeterminate:disabled,
+popover.background check:checked:disabled,
+popover.background check:indeterminate:disabled,
+popover.background radio:checked:disabled,
+popover.background radio:indeterminate:disabled {
   color: rgba(93, 125, 251, 0.5);
 }
 
+popover checkbutton.text-button,
+popover radiobutton.text-button,
 popover.background checkbutton.text-button,
 popover.background radiobutton.text-button {
   outline-style: none;
 }
 
+popover separator,
 popover.background separator {
   margin: 4px 0;
 }
 
+popover list separator,
 popover.background list separator {
   margin: 0;
 }
 
+popover separator,
+popover separator,
+.csd popover separator,
 popover.background separator,
 popover.background separator,
-.csd popover.background separator {
+.csd
+popover.background separator {
   border: none;
   background-color: rgba(255, 255, 255, 0.12);
 }
