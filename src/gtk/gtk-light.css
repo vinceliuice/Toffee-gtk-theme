@@ -2075,7 +2075,7 @@ menuitem accelerator {
   color: #9E9E9E;
 }
 
-.popup:not(.csd) menu accelerator {
+.popup:not(.csd) menu menuitem accelerator {
   color: #757575;
 }
 
@@ -6373,6 +6373,22 @@ window.background:not(.csd) > widget > radiobutton > radio:not(:checked):disable
 window.background:not(.csd) > window > menu,
 window.background:not(.csd) > menu > menu {
   border: none;
+}
+
+window.background:not(.csd) > window > menu menuitem:hover,
+window.background:not(.csd) > menu > menu menuitem:hover {
+  background-color: #5D7DFB;
+}
+
+window.background:not(.csd) > window > menu menuitem:hover, window.background:not(.csd) > window > menu menuitem:hover image,
+window.background:not(.csd) > menu > menu menuitem:hover,
+window.background:not(.csd) > menu > menu menuitem:hover image {
+  color: #FFFFFF;
+}
+
+window.background:not(.csd) > window > menu menuitem:hover accelerator,
+window.background:not(.csd) > menu > menu menuitem:hover accelerator {
+  color: rgba(255, 255, 255, 0.7);
 }
 
 window.background:not(.csd) > widget > menubar {
