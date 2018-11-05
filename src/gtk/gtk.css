@@ -2871,7 +2871,7 @@ switch:checked {
 }
 
 switch:checked:disabled {
-  background-color: rgba(93, 125, 251, 0.15);
+  background-color: rgba(93, 125, 251, 0.2);
 }
 
 switch slider {
@@ -2908,6 +2908,18 @@ switch:disabled slider {
 switch:checked:disabled slider {
   animation: none;
   background-color: #adbdfc;
+}
+
+row:selected switch:checked {
+  background-color: rgba(18, 65, 249, 0.35);
+}
+
+row:selected switch:checked:disabled {
+  background-color: rgba(18, 65, 249, 0.2);
+}
+
+row:selected switch:checked slider {
+  background-color: #2b55fa;
 }
 
 /*************************
