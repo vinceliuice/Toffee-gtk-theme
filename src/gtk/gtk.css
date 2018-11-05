@@ -2292,7 +2292,7 @@ popover.background scrollbar slider:disabled {
 
 popover scrollbar.overlay-indicator:not(.dragging):not(.hovering) slider,
 popover.background scrollbar.overlay-indicator:not(.dragging):not(.hovering) slider {
-  rder: 1px solid rgba(50, 50, 50, 0.3);
+  border: 1px solid rgba(50, 50, 50, 0.3);
 }
 
 popover scrollbar.overlay-indicator:not(.dragging):not(.hovering) button,

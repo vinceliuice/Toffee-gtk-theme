@@ -1810,7 +1810,7 @@ popover.background {
     }
     &.overlay-indicator {
       &:not(.dragging):not(.hovering) {
-        slider { rder: 1px solid rgba(darken($popover_bg, 5%), $lower_opacity); }
+        slider { border: 1px solid rgba(darken($popover_bg, 5%), $lower_opacity); }
         button {
           border: 1px solid rgba(darken($popover_bg, 5%), $lower_opacity);
           background-color: $inverse_hint_fg_color;
