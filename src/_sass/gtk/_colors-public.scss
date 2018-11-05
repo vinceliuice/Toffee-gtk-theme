@@ -35,7 +35,7 @@ base background color of insensitive widgets */
 
 /*
 text foreground color of insensitive widgets */
-@define-color insensitive_fg_color #{"" + $disabled_fg_color};
+@define-color insensitive_fg_color #{"" + if($variant == 'light', gtkalpha(currentColor, 0.38), gtkalpha(currentColor, 0.5))};
 
 /*
 insensitive text widgets and the like base background color */

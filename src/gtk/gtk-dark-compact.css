@@ -232,8 +232,11 @@ entry:disabled {
   color: rgba(255, 255, 255, 0.5);
 }
 
-spinbutton.flat:not(.vertical), popover entry,
-popover.background entry, notebook > stack:not(:only-child) entry:not(.search),
+spinbutton.flat:not(.vertical), popover .linked entry, popover entry,
+popover spinbutton:not(.vertical),
+popover.background .linked entry,
+popover.background entry,
+popover.background spinbutton:not(.vertical), notebook > stack:not(:only-child) entry:not(.search),
 notebook > stack:not(:only-child) spinbutton:not(.vertical), messagedialog entry, colorchooser .popover.osd spinbutton:not(.vertical), entry.preferences-search, layoutpane entry.search, editortweak entry.search, window#whiskermenu-window entry, .budgie-popover entry,
 .budgie-popover spinbutton:not(.vertical), .raven .raven-background spinbutton:not(.vertical), #login_window entry,
 entry.flat {
@@ -245,7 +248,8 @@ entry.flat {
   color: #FFFFFF;
 }
 
-spinbutton.flat:focus:not(.vertical), popover entry:focus, notebook > stack:not(:only-child) entry:focus:not(.search),
+spinbutton.flat:focus:not(.vertical), popover entry:focus,
+popover spinbutton:focus:not(.vertical), notebook > stack:not(:only-child) entry:focus:not(.search),
 notebook > stack:not(:only-child) spinbutton:focus:not(.vertical), messagedialog entry:focus, colorchooser .popover.osd spinbutton:focus:not(.vertical), entry.preferences-search:focus, layoutpane entry.search:focus, editortweak entry.search:focus, window#whiskermenu-window entry:focus, .budgie-popover entry:focus,
 .budgie-popover spinbutton:focus:not(.vertical), .raven .raven-background spinbutton:focus:not(.vertical), #login_window entry:focus,
 entry.flat:focus {
@@ -253,7 +257,8 @@ entry.flat:focus {
   box-shadow: inset 0 -1px rgba(255, 255, 255, 0.3);
 }
 
-spinbutton.flat:disabled:not(.vertical), popover entry:disabled, notebook > stack:not(:only-child) entry:disabled:not(.search),
+spinbutton.flat:disabled:not(.vertical), popover entry:disabled,
+popover spinbutton:disabled:not(.vertical), notebook > stack:not(:only-child) entry:disabled:not(.search),
 notebook > stack:not(:only-child) spinbutton:disabled:not(.vertical), messagedialog entry:disabled, colorchooser .popover.osd spinbutton:disabled:not(.vertical), entry.preferences-search:disabled, layoutpane entry.search:disabled, editortweak entry.search:disabled, window#whiskermenu-window entry:disabled, .budgie-popover entry:disabled,
 .budgie-popover spinbutton:disabled:not(.vertical), .raven .raven-background spinbutton:disabled:not(.vertical), #login_window entry:disabled,
 entry.flat:disabled {
@@ -334,7 +339,8 @@ entry.error:disabled {
   color: rgba(255, 255, 255, 0.5);
 }
 
-spinbutton.error.flat:not(.vertical), popover entry.error, notebook > stack:not(:only-child) entry.error:not(.search),
+spinbutton.error.flat:not(.vertical), popover entry.error,
+popover spinbutton.error:not(.vertical), notebook > stack:not(:only-child) entry.error:not(.search),
 notebook > stack:not(:only-child) spinbutton.error:not(.vertical), messagedialog entry.error, colorchooser .popover.osd spinbutton.error:not(.vertical), entry.error.preferences-search, layoutpane entry.error.search, editortweak entry.error.search, window#whiskermenu-window entry.error, .budgie-popover entry.error,
 .budgie-popover spinbutton.error:not(.vertical), .raven .raven-background spinbutton.error:not(.vertical), #login_window entry.error,
 entry.error.flat {
@@ -345,7 +351,8 @@ entry.error.flat {
   color: #FFFFFF;
 }
 
-spinbutton.error.flat:focus:not(.vertical), popover entry.error:focus, notebook > stack:not(:only-child) entry.error:focus:not(.search),
+spinbutton.error.flat:focus:not(.vertical), popover entry.error:focus,
+popover spinbutton.error:focus:not(.vertical), notebook > stack:not(:only-child) entry.error:focus:not(.search),
 notebook > stack:not(:only-child) spinbutton.error:focus:not(.vertical), messagedialog entry.error:focus, colorchooser .popover.osd spinbutton.error:focus:not(.vertical), entry.error.preferences-search:focus, layoutpane entry.error.search:focus, editortweak entry.error.search:focus, window#whiskermenu-window entry.error:focus, .budgie-popover entry.error:focus,
 .budgie-popover spinbutton.error:focus:not(.vertical), .raven .raven-background spinbutton.error:focus:not(.vertical), #login_window entry.error:focus,
 entry.error.flat:focus {
@@ -353,7 +360,8 @@ entry.error.flat:focus {
   box-shadow: inset 0 -1px #DD2C00;
 }
 
-spinbutton.error.flat:disabled:not(.vertical), popover entry.error:disabled, notebook > stack:not(:only-child) entry.error:disabled:not(.search),
+spinbutton.error.flat:disabled:not(.vertical), popover entry.error:disabled,
+popover spinbutton.error:disabled:not(.vertical), notebook > stack:not(:only-child) entry.error:disabled:not(.search),
 notebook > stack:not(:only-child) spinbutton.error:disabled:not(.vertical), messagedialog entry.error:disabled, colorchooser .popover.osd spinbutton.error:disabled:not(.vertical), entry.error.preferences-search:disabled, layoutpane entry.error.search:disabled, editortweak entry.error.search:disabled, window#whiskermenu-window entry.error:disabled, .budgie-popover entry.error:disabled,
 .budgie-popover spinbutton.error:disabled:not(.vertical), .raven .raven-background spinbutton.error:disabled:not(.vertical), #login_window entry.error:disabled,
 entry.error.flat:disabled {
@@ -400,7 +408,8 @@ entry.warning:disabled {
   color: rgba(255, 255, 255, 0.5);
 }
 
-spinbutton.warning.flat:not(.vertical), popover entry.warning, notebook > stack:not(:only-child) entry.warning:not(.search),
+spinbutton.warning.flat:not(.vertical), popover entry.warning,
+popover spinbutton.warning:not(.vertical), notebook > stack:not(:only-child) entry.warning:not(.search),
 notebook > stack:not(:only-child) spinbutton.warning:not(.vertical), messagedialog entry.warning, colorchooser .popover.osd spinbutton.warning:not(.vertical), entry.warning.preferences-search, layoutpane entry.warning.search, editortweak entry.warning.search, window#whiskermenu-window entry.warning, .budgie-popover entry.warning,
 .budgie-popover spinbutton.warning:not(.vertical), .raven .raven-background spinbutton.warning:not(.vertical), #login_window entry.warning,
 entry.warning.flat {
@@ -411,7 +420,8 @@ entry.warning.flat {
   color: #FFFFFF;
 }
 
-spinbutton.warning.flat:focus:not(.vertical), popover entry.warning:focus, notebook > stack:not(:only-child) entry.warning:focus:not(.search),
+spinbutton.warning.flat:focus:not(.vertical), popover entry.warning:focus,
+popover spinbutton.warning:focus:not(.vertical), notebook > stack:not(:only-child) entry.warning:focus:not(.search),
 notebook > stack:not(:only-child) spinbutton.warning:focus:not(.vertical), messagedialog entry.warning:focus, colorchooser .popover.osd spinbutton.warning:focus:not(.vertical), entry.warning.preferences-search:focus, layoutpane entry.warning.search:focus, editortweak entry.warning.search:focus, window#whiskermenu-window entry.warning:focus, .budgie-popover entry.warning:focus,
 .budgie-popover spinbutton.warning:focus:not(.vertical), .raven .raven-background spinbutton.warning:focus:not(.vertical), #login_window entry.warning:focus,
 entry.warning.flat:focus {
@@ -419,7 +429,8 @@ entry.warning.flat:focus {
   box-shadow: inset 0 -1px #FF6D00;
 }
 
-spinbutton.warning.flat:disabled:not(.vertical), popover entry.warning:disabled, notebook > stack:not(:only-child) entry.warning:disabled:not(.search),
+spinbutton.warning.flat:disabled:not(.vertical), popover entry.warning:disabled,
+popover spinbutton.warning:disabled:not(.vertical), notebook > stack:not(:only-child) entry.warning:disabled:not(.search),
 notebook > stack:not(:only-child) spinbutton.warning:disabled:not(.vertical), messagedialog entry.warning:disabled, colorchooser .popover.osd spinbutton.warning:disabled:not(.vertical), entry.warning.preferences-search:disabled, layoutpane entry.warning.search:disabled, editortweak entry.warning.search:disabled, window#whiskermenu-window entry.warning:disabled, .budgie-popover entry.warning:disabled,
 .budgie-popover spinbutton.warning:disabled:not(.vertical), .raven .raven-background spinbutton.warning:disabled:not(.vertical), #login_window entry.warning:disabled,
 entry.warning.flat:disabled {
@@ -451,11 +462,13 @@ entry progress {
   background-color: transparent;
 }
 
-.linked:not(.vertical) > spinbutton.flat:not(.vertical), popover .linked:not(.vertical) > entry, notebook > stack:not(:only-child) .linked:not(.vertical) > entry:not(.search),
+.linked:not(.vertical) > spinbutton.flat:not(.vertical), popover .linked:not(.vertical) > entry,
+popover .linked:not(.vertical) > spinbutton:not(.vertical), notebook > stack:not(:only-child) .linked:not(.vertical) > entry:not(.search),
 notebook > stack:not(:only-child) .linked:not(.vertical) > spinbutton:not(.vertical), messagedialog .linked:not(.vertical) > entry, colorchooser .popover.osd .linked:not(.vertical) > spinbutton:not(.vertical), .linked:not(.vertical) > entry.preferences-search, layoutpane .linked:not(.vertical) > entry.search, editortweak .linked:not(.vertical) > entry.search, window#whiskermenu-window .linked:not(.vertical) > entry, .budgie-popover .linked:not(.vertical) > entry,
 .budgie-popover .linked:not(.vertical) > spinbutton:not(.vertical), .raven .raven-background .linked:not(.vertical) > spinbutton:not(.vertical), #login_window .linked:not(.vertical) > entry,
 .linked.vertical > spinbutton.flat:not(.vertical),
 popover .linked.vertical > entry,
+popover .linked.vertical > spinbutton:not(.vertical),
 notebook > stack:not(:only-child) .linked.vertical > entry:not(.search),
 notebook > stack:not(:only-child) .linked.vertical > spinbutton:not(.vertical),
 messagedialog .linked.vertical > entry,
@@ -2098,37 +2111,54 @@ popover button:checked:disabled {
   background-color: rgba(93, 125, 251, 0.5);
 }
 
-popover button.flat, popover modelbutton.flat,
+popover row.button.flat.menuitem.activatable, popover .button.flat.menuitem.view, popover treeview.view header button.button.flat.menuitem, treeview.view header popover button.button.flat.menuitem, popover .budgie-menu button.button.flat.menuitem, .budgie-menu popover button.button.flat.menuitem,
+popover row.activatable, popover .view, popover treeview.view header button, treeview.view header popover button, popover .budgie-menu button, .budgie-menu popover button,
+popover.background row.button.flat.menuitem.activatable, popover.background .button.flat.menuitem.view, popover.background treeview.view header button.button.flat.menuitem, treeview.view header popover.background button.button.flat.menuitem, popover.background .budgie-menu button.button.flat.menuitem, .budgie-menu popover.background button.button.flat.menuitem,
+popover.background row.activatable, popover.background .view, popover.background treeview.view header button, treeview.view header popover.background button, popover.background .budgie-menu button, .budgie-menu popover.background button, popover button.flat, popover modelbutton.flat,
 popover menuitem.button.flat,
+popover spinbutton.vertical button,
 popover.background modelbutton.flat,
-popover.background menuitem.button.flat {
+popover.background menuitem.button.flat,
+popover.background spinbutton.vertical button {
   color: rgba(255, 255, 255, 0.7);
   background-color: transparent;
 }
 
-popover button.flat:hover, popover modelbutton.flat:hover,
-popover menuitem.button.flat:hover {
+popover row.button.flat.menuitem.activatable:hover, popover .button.flat.menuitem.view:hover, popover treeview.view header button.button.flat.menuitem:hover, treeview.view header popover button.button.flat.menuitem:hover, popover .budgie-menu button.button.flat.menuitem:hover, .budgie-menu popover button.button.flat.menuitem:hover,
+popover row.activatable:hover, popover .view:hover, popover treeview.view header button:hover, treeview.view header popover button:hover, popover .budgie-menu button:hover, .budgie-menu popover button:hover, popover.background .button.flat.menuitem.view:hover, popover.background .view:hover, popover button.flat:hover, popover modelbutton.flat:hover,
+popover menuitem.button.flat:hover,
+popover spinbutton.vertical button:hover {
   box-shadow: inset 0 0 0 9999px rgba(255, 255, 255, 0.12);
   color: #FFFFFF;
 }
 
-popover button.flat:checked, popover modelbutton.flat:checked,
-popover menuitem.button.flat:checked, popover button.flat:active, popover modelbutton.flat:active,
-popover menuitem.button.flat:active {
+popover row.button.flat.menuitem.activatable:checked, popover .button.flat.menuitem.view:checked, popover treeview.view header button.button.flat.menuitem:checked, treeview.view header popover button.button.flat.menuitem:checked, popover .budgie-menu button.button.flat.menuitem:checked, .budgie-menu popover button.button.flat.menuitem:checked,
+popover row.activatable:checked, popover .view:checked, popover treeview.view header button:checked, treeview.view header popover button:checked, popover .budgie-menu button:checked, .budgie-menu popover button:checked, popover.background .button.flat.menuitem.view:checked, popover.background .view:checked, popover button.flat:checked, popover modelbutton.flat:checked,
+popover menuitem.button.flat:checked,
+popover spinbutton.vertical button:checked, popover row.button.flat.menuitem.activatable:active, popover .button.flat.menuitem.view:active, popover treeview.view header button.button.flat.menuitem:active, treeview.view header popover button.button.flat.menuitem:active, popover .budgie-menu button.button.flat.menuitem:active, .budgie-menu popover button.button.flat.menuitem:active,
+popover row.activatable:active, popover .view:active, popover treeview.view header button:active, treeview.view header popover button:active, popover .budgie-menu button:active, .budgie-menu popover button:active, popover.background .button.flat.menuitem.view:active, popover.background .view:active, popover button.flat:active, popover modelbutton.flat:active,
+popover menuitem.button.flat:active,
+popover spinbutton.vertical button:active {
   color: #FFFFFF;
   box-shadow: inset 0 0 0 9999px rgba(255, 255, 255, 0.12);
   background-image: radial-gradient(circle farthest-corner at center, rgba(255, 255, 255, 0.12) 10%, transparent 0%);
 }
 
-popover button.flat:disabled, popover modelbutton.flat:disabled,
-popover menuitem.button.flat:disabled {
+popover row.button.flat.menuitem.activatable:disabled, popover .button.flat.menuitem.view:disabled, popover treeview.view header button.button.flat.menuitem:disabled, treeview.view header popover button.button.flat.menuitem:disabled, popover .budgie-menu button.button.flat.menuitem:disabled, .budgie-menu popover button.button.flat.menuitem:disabled,
+popover row.activatable:disabled, popover .view:disabled, popover treeview.view header button:disabled, treeview.view header popover button:disabled, popover .budgie-menu button:disabled, .budgie-menu popover button:disabled, popover.background .button.flat.menuitem.view:disabled, popover.background .view:disabled, popover button.flat:disabled, popover modelbutton.flat:disabled,
+popover menuitem.button.flat:disabled,
+popover spinbutton.vertical button:disabled {
   color: rgba(255, 255, 255, 0.3);
   background-color: transparent;
 }
 
-popover entry,
-popover.background entry {
+popover .linked entry, popover entry,
+popover spinbutton:not(.vertical),
+popover.background .linked entry,
+popover.background entry,
+popover.background spinbutton:not(.vertical) {
   border-radius: 0;
+  caret-color: #FFFFFF;
   transition: all 270ms cubic-bezier(0, 0, 0.2, 1);
   border-image: radial-gradient(circle closest-corner at center calc(100% - 1px), rgba(255, 255, 255, 0.3) 0%, transparent 0%) 0 0 0/0 0 0px;
   box-shadow: inset 0 -1px rgba(255, 255, 255, 0.3);
@@ -2136,26 +2166,33 @@ popover.background entry {
   color: #FFFFFF;
 }
 
-popover entry:focus {
+popover entry:focus,
+popover spinbutton:focus:not(.vertical) {
   border-image: radial-gradient(circle closest-corner at center calc(100% - 1px), #5D7DFB 100%, transparent 0%) 0 0 2/0 0 2px;
   box-shadow: inset 0 -1px rgba(255, 255, 255, 0.3);
 }
 
-popover entry:disabled {
+popover entry:disabled,
+popover spinbutton:disabled:not(.vertical) {
   box-shadow: inset 0 -1px rgba(255, 255, 255, 0.12);
   background-color: transparent;
 }
 
-popover entry,
-popover.background entry, popover entry label, popover.background entry label, popover entry image, popover.background entry image {
+popover .linked entry, popover entry,
+popover spinbutton:not(.vertical),
+popover.background .linked entry,
+popover.background entry,
+popover.background spinbutton:not(.vertical), popover .linked entry label, popover entry label, popover spinbutton:not(.vertical) label, popover.background .linked entry label, popover.background entry label, popover.background spinbutton:not(.vertical) label, popover .linked entry image, popover entry image, popover spinbutton:not(.vertical) image, popover.background .linked entry image, popover.background entry image, popover.background spinbutton:not(.vertical) image {
   color: rgba(255, 255, 255, 0.7);
 }
 
-popover entry:focus, popover entry label:focus, popover entry image:focus {
+popover entry:focus,
+popover spinbutton:focus:not(.vertical), popover entry label:focus, popover spinbutton:not(.vertical) label:focus, popover entry image:focus, popover spinbutton:not(.vertical) image:focus {
   color: #FFFFFF;
 }
 
-popover entry:disabled, popover entry label:disabled, popover entry image:disabled {
+popover entry:disabled,
+popover spinbutton:disabled:not(.vertical), popover entry label:disabled, popover spinbutton:not(.vertical) label:disabled, popover entry image:disabled, popover spinbutton:not(.vertical) image:disabled {
   color: rgba(255, 255, 255, 0.3);
 }
 
@@ -2201,11 +2238,7 @@ popover.background > toolbar {
   margin: -2px;
 }
 
-popover > list,
-popover > .view,
 popover > toolbar,
-popover.background > list,
-popover.background > .view,
 popover.background > toolbar {
   border-style: none;
   box-shadow: none;
@@ -2217,7 +2250,7 @@ popover.background list,
 popover.background row,
 popover.background .view {
   color: rgba(255, 255, 255, 0.7);
-  background-color: transparent;
+  background-color: #393939;
   border-color: rgba(255, 255, 255, 0.12);
 }
 
@@ -2259,7 +2292,7 @@ popover.background scrollbar slider:disabled {
 
 popover scrollbar.overlay-indicator:not(.dragging):not(.hovering) slider,
 popover.background scrollbar.overlay-indicator:not(.dragging):not(.hovering) slider {
-  border: 1px solid rgba(52, 52, 52, 0.3);
+  rder: 1px solid rgba(52, 52, 52, 0.3);
 }
 
 popover scrollbar.overlay-indicator:not(.dragging):not(.hovering) button,
@@ -6101,9 +6134,29 @@ dialog.background.csd > headerbar.titlebar > label:not(.title):not(.subtitle) {
   font-weight: 700;
 }
 
+/******************
+  * Gnome calender *
+  ******************/
+popover.background datechooser day.day.other-month label {
+  color: rgba(255, 255, 255, 0.12);
+}
+
+popover.background datechooser day.day.other-month:hover {
+  background-color: rgba(255, 255, 255, 0.12);
+}
+
+popover.background datechooser day.day.other-month:active {
+  background-color: rgba(255, 255, 255, 0.12);
+}
+
+popover.background datechooser label.weekday {
+  color: rgba(255, 255, 255, 0.7);
+  font-weight: bold;
+}
+
 /*********
- * To Do *
- *********/
+  * To Do *
+  *********/
 taskrow {
   transition: all 180ms cubic-bezier(0, 0, 0.2, 1);
   margin: 0 -8px;
@@ -8247,7 +8300,7 @@ base background color of insensitive widgets */
 @define-color insensitive_bg_color #323232;
 /*
 text foreground color of insensitive widgets */
-@define-color insensitive_fg_color rgba(255, 255, 255, 0.5);
+@define-color insensitive_fg_color alpha(currentColor, 0.5);
 /*
 insensitive text widgets and the like base background color */
 @define-color insensitive_base_color #363636;
