@@ -3943,10 +3943,12 @@ progressbar.vertical progress {
 }
 
 progressbar trough {
+  border-radius: 9999px;
   background-color: rgba(93, 125, 251, 0.3);
 }
 
 progressbar progress {
+  border-radius: 9999px;
   background-color: #5D7DFB;
 }
 

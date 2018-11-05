@@ -2868,9 +2868,8 @@ progressbar {
   color: $hint_fg_color;
   font-size: smaller;
 
-  trough { background-color: rgba($progress_color, $lower_opacity); }
-
-  progress { background-color: $progress_color; }
+  trough { border-radius: $circular_radius; background-color: rgba($progress_color, $lower_opacity); }
+  progress { border-radius: $circular_radius; background-color: $progress_color; }
 
   &.osd { // progressbar.osd used for epiphany page loading progress
     // min-width: $bar_size;
