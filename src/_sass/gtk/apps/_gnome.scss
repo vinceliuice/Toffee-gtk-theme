@@ -1105,9 +1105,12 @@ dialog.background.csd {
 popover.background {
   datechooser {
     day.day.other-month {
-      label { color: $inverse_divider_color; }
-      &:hover { background-color: $inverse_divider_color; }
-      &:active { background-color: $inverse_divider_color; }
+      color: $inverse_divider_color;
+
+      &:hover, &:active, &:checked {
+        color: $inverse_hint_fg_color;
+        background-color: $inverse_divider_color;
+      }
     }
 
     label.weekday {
