@@ -1893,6 +1893,7 @@ menubar,
   -GtkWidget-window-dragging: true;
   padding: 0;
   background-color: #FFFFFF;
+  color: rgba(0, 0, 0, 0.54);
 }
 
 menubar > menuitem,
@@ -6536,6 +6537,14 @@ stack#conversation_viewer scrolledwindow.geary-conversation-scroller > viewport.
   border: none;
 }
 
+popover.background list.geary-folder-popover-list row.activatable.geary-folder-popover-list-row label, popover.background list.geary-folder-popover-list .geary-folder-popover-list-row.view label, popover.background list.geary-folder-popover-list treeview.view header button.geary-folder-popover-list-row label, treeview.view header popover.background list.geary-folder-popover-list button.geary-folder-popover-list-row label, popover.background list.geary-folder-popover-list .budgie-menu button.geary-folder-popover-list-row label, .budgie-menu popover.background list.geary-folder-popover-list button.geary-folder-popover-list-row label {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+popover.background list.geary-folder-popover-list row.activatable.geary-folder-popover-list-row label:disabled, popover.background list.geary-folder-popover-list .geary-folder-popover-list-row.view label:disabled, popover.background list.geary-folder-popover-list treeview.view header button.geary-folder-popover-list-row label:disabled, treeview.view header popover.background list.geary-folder-popover-list button.geary-folder-popover-list-row label:disabled, popover.background list.geary-folder-popover-list .budgie-menu button.geary-folder-popover-list-row label:disabled, .budgie-menu popover.background list.geary-folder-popover-list button.geary-folder-popover-list-row label:disabled {
+  color: rgba(255, 255, 255, 0.3);
+}
+
 /************
  * Inkscape *
  ************/
@@ -8306,10 +8315,10 @@ box.vertical > stack > box.vertical > .raven-background > viewport.frame > list 
    use responsibly! */
 /*
 widget text/foreground color */
-@define-color theme_fg_color rgba(0, 0, 0, 0.75);
+@define-color theme_fg_color currentColor;
 /*
 text color for entries, views and content in general */
-@define-color theme_text_color rgba(0, 0, 0, 0.75);
+@define-color theme_text_color currentColor;
 /*
 widget base background color */
 @define-color theme_bg_color #F5F5F5;
@@ -8327,16 +8336,16 @@ base background color of insensitive widgets */
 @define-color insensitive_bg_color #F5F5F5;
 /*
 text foreground color of insensitive widgets */
-@define-color insensitive_fg_color alpha(currentColor, 0.38);
+@define-color insensitive_fg_color alpha(currentColor, 0.5);
 /*
 insensitive text widgets and the like base background color */
 @define-color insensitive_base_color #FAFAFA;
 /*
 widget text/foreground color on backdrop windows */
-@define-color theme_unfocused_fg_color rgba(0, 0, 0, 0.75);
+@define-color theme_unfocused_fg_color currentColor;
 /*
 text color for entries, views and content in general on backdrop windows */
-@define-color theme_unfocused_text_color rgba(0, 0, 0, 0.75);
+@define-color theme_unfocused_text_color currentColor;
 /*
 widget base background color on backdrop windows */
 @define-color theme_unfocused_bg_color #F5F5F5;
@@ -8351,7 +8360,7 @@ text/foreground color of selections on backdrop windows */
 @define-color theme_unfocused_selected_fg_color #FFFFFF;
 /*
 insensitive color on backdrop windows */
-@define-color unfocused_insensitive_color rgba(0, 0, 0, 0.38);
+@define-color unfocused_insensitive_color alpha(currentColor, 0.5);
 /*
 widgets main borders color */
 @define-color borders rgba(0, 0, 0, 0.08);

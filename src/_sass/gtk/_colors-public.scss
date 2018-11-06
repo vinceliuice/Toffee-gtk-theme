@@ -5,13 +5,17 @@
 
 // Sass thinks we're using the colors in the variables as strings and may shoot
 // warning, it's innocuous and can be defeated by using "" + $var
+
+$theme_fg_color: currentColor;
+$insensitive_fg_color: gtkalpha(currentColor, 0.5);
+
 /*
 widget text/foreground color */
-@define-color theme_fg_color #{"" + $fg_color};
+@define-color theme_fg_color #{"" + $theme_fg_color};
 
 /*
 text color for entries, views and content in general */
-@define-color theme_text_color #{"" + $fg_color};
+@define-color theme_text_color #{"" + $theme_fg_color};
 
 /*
 widget base background color */
@@ -35,7 +39,7 @@ base background color of insensitive widgets */
 
 /*
 text foreground color of insensitive widgets */
-@define-color insensitive_fg_color #{"" + if($variant == 'light', gtkalpha(currentColor, 0.38), gtkalpha(currentColor, 0.5))};
+@define-color insensitive_fg_color #{"" + $insensitive_fg_color};
 
 /*
 insensitive text widgets and the like base background color */
@@ -43,11 +47,11 @@ insensitive text widgets and the like base background color */
 
 /*
 widget text/foreground color on backdrop windows */
-@define-color theme_unfocused_fg_color #{"" + $fg_color};
+@define-color theme_unfocused_fg_color #{"" + $theme_fg_color};
 
 /*
 text color for entries, views and content in general on backdrop windows */
-@define-color theme_unfocused_text_color #{"" + $fg_color};
+@define-color theme_unfocused_text_color #{"" + $theme_fg_color};
 
 /*
 widget base background color on backdrop windows */
@@ -67,7 +71,7 @@ text/foreground color of selections on backdrop windows */
 
 /*
 insensitive color on backdrop windows */
-@define-color unfocused_insensitive_color #{"" + $disabled_fg_color};
+@define-color unfocused_insensitive_color #{"" + $insensitive_fg_color};
 
 /*
 widgets main borders color */

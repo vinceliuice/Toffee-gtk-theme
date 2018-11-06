@@ -1541,6 +1541,7 @@ menubar,
   padding: 0;
   // box-shadow: inset 0 -1px $border_color;
   background-color: $titlebar_bg_color;
+  color: $titlebar_secondary_fg_color;
 
   > menuitem {
     transition: none;

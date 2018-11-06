@@ -270,6 +270,19 @@ stack#conversation_viewer {
   }
 }
 
+// Popover
+popover.background {
+  list.geary-folder-popover-list {
+    row.activatable.geary-folder-popover-list-row {
+      label {
+        color: $popover_fg;
+        &:disabled { color: $popover_disabled_fg; }
+      }
+    }
+  }
+}
+
+
 /************
  * Inkscape *
  ************/
