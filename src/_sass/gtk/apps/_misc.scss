@@ -72,13 +72,11 @@ window.background:not(.csd) {
       // color: $fg_color;
 
       &:hover { background-image: image(gtkalpha(currentColor, 0.1 / 2)); }
-
       &:active { background-image: image(gtkalpha(currentColor, 0.1)); }
     }
 
     // use 16px assets for hard-coded sizing
     > checkbutton > check { @extend %small_check; }
-
     > radiobutton > radio { @extend %small_radio; }
 
     // make check/radio visible regardless of whether the background is bright or dark
@@ -87,14 +85,20 @@ window.background:not(.csd) {
       color: $grey_600;
 
       &:hover, &:active { color: $grey_900; }
-
       &:disabled { color: rgba($grey_600, 0.5); }
     }
   }
 
-  // remove ugly border around the menus
   > window > menu,
-  > menu > menu { border: none; }
+  > menu > menu {
+    border: none; // remove ugly border around the menus
+
+    menuitem:hover {
+      background-color: $primary_color;
+      &, image { color: $inverse_fg_color; }
+      accelerator { color: $inverse_secondary_fg_color; }
+    }
+  }
 }
 
 // Firefox now uses this for selected items
@@ -107,7 +111,6 @@ window.background:not(.csd) {
       color: $titlebar_secondary_fg_color;
 
       &:hover { color: $titlebar_fg_color; }
-
       &:disabled { color: $titlebar_disabled_secondary_fg_color; }
     }
 
@@ -266,6 +269,19 @@ stack#conversation_viewer {
     border: none; // unset borders
   }
 }
+
+// Popover
+popover.background {
+  list.geary-folder-popover-list {
+    row.activatable.geary-folder-popover-list-row {
+      label {
+        color: $popover_fg;
+        &:disabled { color: $popover_disabled_fg; }
+      }
+    }
+  }
+}
+
 
 /************
  * Inkscape *

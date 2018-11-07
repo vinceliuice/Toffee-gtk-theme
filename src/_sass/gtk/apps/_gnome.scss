@@ -1098,10 +1098,32 @@ dialog.background.csd {
   }
 }
 
+ /******************
+  * Gnome calender *
+  ******************/
 
-/*********
- * To Do *
- *********/
+popover.background {
+  datechooser {
+    day.day.other-month {
+      color: $inverse_divider_color;
+
+      &:hover, &:active, &:checked {
+        color: $inverse_hint_fg_color;
+        background-color: $inverse_divider_color;
+      }
+    }
+
+    label.weekday {
+      color: $inverse_secondary_fg_color; // FIXME: can not set color, use @define-color insensitive_fg_color
+      font-weight: bold;
+    }
+  }
+}
+
+
+ /*********
+  * To Do *
+  *********/
 taskrow {
   transition: $shorter_transition;
   margin: 0 -8px;

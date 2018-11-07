@@ -301,8 +301,7 @@ entry {
       // box-shadow: inset 0 0 0 2px $accent_color;
     }
 
-    .osd & {
-    }
+    .osd & { }
   }
 
   progress {
@@ -844,8 +843,7 @@ spinbutton {
   }
 
   // OSD vertical
-  .osd &.vertical button:first-child {
-  }
+  .osd &.vertical button:first-child { }
 
   // Misc
   treeview &:not(.vertical) {
@@ -1543,6 +1541,7 @@ menubar,
   padding: 0;
   // box-shadow: inset 0 -1px $border_color;
   background-color: $titlebar_bg_color;
+  color: $titlebar_secondary_fg_color;
 
   > menuitem {
     transition: none;
@@ -1678,10 +1677,9 @@ menuitem {
     &:hover { background-color: $opaque_divider_color; }
 
     &:disabled { color: $opaque_disabled_fg_color; } // separator/border also use this color.
-  }
 
-  // FIXME: not working this
-  accelerator { color: $opaque_secondary_fg_color; }
+    accelerator { color: $opaque_secondary_fg_color; }
+  }
 }
 
 
@@ -1702,20 +1700,55 @@ $popover_border: rgba($white, 0.12);
   &:hover {
     transition: none;
     color: $inverse_fg_color;
-    background-color: rgba($inverse_fg_color, 0.15);
+    background-color: $inverse_divider_color;
   }
+
   &:checked, &:active {
     background-color: $primary_color;
     color: $inverse_fg_color;
   }
-  &:disabled,
-  &:checked:disabled { color: $popover_disabled_fg; }
+
+  &:disabled {
+    color: $popover_disabled_fg;
+    background-color: transparent;
+  }
+
+  &:checked:disabled {
+    color: $popover_disabled_fg;
+    background-color: rgba($primary_color, 0.5);
+  }
+
+  &.flat {
+    color: $popover_fg;
+    background-color: transparent;
+
+    &:hover {
+      box-shadow: inset 0 0 0 9999px $inverse_divider_color;
+      color: $inverse_fg_color;
+    }
+
+    &:checked, &:active {
+      color: $inverse_fg_color;
+      box-shadow: inset 0 0 0 9999px $inverse_divider_color;
+      background-image: radial-gradient(circle farthest-corner at center,
+                                        $inverse_divider_color 10%,
+                                        transparent 0%);
+    }
+
+    &:disabled {
+      color: $popover_disabled_fg;
+      background-color: transparent;
+    }
+  }
 }
 
 %popover_entry {
   border-radius: 0;
+  caret-color: $inverse_fg_color;
   @include entry(flat-normal, $inverse_track_color);
+
   &:focus { @include entry(flat-focus); }
+
   &:disabled {
     box-shadow: inset 0 -1px $inverse_divider_color;
     background-color: transparent;
@@ -1728,6 +1761,7 @@ $popover_border: rgba($white, 0.12);
   }
 }
 
+popover,
 popover.background {
   transition: $shadow_transition;
   padding: 2px;
@@ -1738,19 +1772,15 @@ popover.background {
   &:backdrop { box-shadow: $shadow_1; color: rgba($popover_fg, 0.75); }
   &:disabled { color: $popover_disabled_fg; }
 
-  image, label { &:disabled { color: $popover_disabled_fg; } }
+  image, label { &:disabled { color: $popover_disabled_fg; }}
 
   &, .csd & {
-//    border-style: solid;
-//    border-width: 1px;
-//    border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.2) rgba(0, 0, 0, 0.3);
     border-radius: $buttons_radius + 1px;
   }
 
   > stack { margin: -4px; } // remove extra padding from menu style popovers
   > toolbar { margin: -2px; }
-  > list,
-  > .view,
+
   > toolbar {
     border-style: none;
     box-shadow: none;
@@ -1759,9 +1789,12 @@ popover.background {
 
   list, row, .view {
     color: $popover_fg;
-    background-color: transparent;
+    background-color: darken($popover_bg, 3%);
     border-color: $popover_border;
   }
+
+  row.button.flat.menuitem.activatable,
+  row.activatable, .view { @extend %popover_button.flat; }
 
   treeview.view header button { border-color: $popover_border; }
 
@@ -1770,29 +1803,21 @@ popover.background {
   scrollbar {
     background-color: rgba(darken($popover_bg, 5%), 0.65);
     border-color: $popover_border;
-
     slider {
       background-color: $inverse_hint_fg_color;
       &:hover { background-color: $inverse_secondary_fg_color; }
       &:active { background-color: $inverse_fg_color; }
       &:disabled { background-color: $inverse_disabled_secondary_fg_color; }
     }
-
     &.overlay-indicator {
       &:not(.dragging):not(.hovering) {
-
-        slider {
-          border: 1px solid rgba(darken($popover_bg, 5%), $lower_opacity);
-        }
-
+        slider { border: 1px solid rgba(darken($popover_bg, 5%), $lower_opacity); }
         button {
           border: 1px solid rgba(darken($popover_bg, 5%), $lower_opacity);
           background-color: $inverse_hint_fg_color;
-
           &:disabled { background-color: $inverse_disabled_secondary_fg_color; }
         }
       }
-
       &.dragging,
       &.hovering { background-color: rgba(darken($popover_bg, 5%), $higher_opacity); }
     }
@@ -1802,12 +1827,49 @@ popover.background {
   &.magnifier,
   &.osd { @extend %osd; }
 
-  entry { @extend %entry.flat; @extend %popover_entry; }
+  .linked entry, entry,
+  spinbutton:not(.vertical) { @extend %entry.flat; @extend %popover_entry; }
+
   button.combo { @extend %combo_flat; @extend %popover_button; }
 
-  button:not(.suggested-action):not(.destructive-action) { @extend %popover_button; }
-  menuitem.button.flat, modelbutton.flat { @extend %popover_button; }
+  button { @extend %popover_button; }
+
+  modelbutton.flat,
+  menuitem.button.flat,
+  spinbutton.vertical button { @extend %popover_button.flat; }
+
   &.menu button, button.model { border-radius: $buttons_radius; }
+
+    // Suggested and Destructive Action buttons
+  @each $b_type, $b_color in (suggested-action, $suggested_color),
+                             (destructive-action, $destructive_color) {
+    button.#{$b_type} {
+      background-color: $b_color;
+      color: $inverse_fg_color;
+      &:disabled {
+        color: $inverse_disabled_fg_color;
+        background-color: rgba($b_color, 0.5);
+      }
+      &:hover {
+        color: $inverse_fg_color;
+        background-color: lighten($b_color, 5%);
+      }
+      &:checked { background-color: mix($inverse_fg_color, $b_color, percentage($lower_opacity)); }
+      &.flat {
+        background-color: transparent;
+        color: $b_color;
+        &:hover {
+          color: $b_color;
+          background-color: rgba($b_color, 0.15);
+        }
+        &:disabled {
+          background-color: transparent;
+          color: rgba($b_color, 0.5);
+        }
+        &:checked { background-color: rgba($b_color, 0.3); }
+      }
+    }
+  }
 
   check, radio {
     color: $popover_fg;
@@ -2234,7 +2296,7 @@ switch {
   &:checked {
     background-color: rgba($accent_color, 0.35);
 
-    &:disabled { background-color: rgba($accent_color, 0.15); }
+    &:disabled { background-color: rgba($accent_color, 0.2); }
   }
 
   slider {
@@ -2268,7 +2330,15 @@ switch {
 
   &:checked:disabled slider { animation: none; background-color: mix($base_color, $accent_color, 50%); }
 
-  row:selected & { }
+  row:selected & {
+    &:checked {
+      background-color: rgba(darken($accent_color, 15%), 0.35);
+
+      &:disabled { background-color: rgba(darken($accent_color, 15%), 0.2); }
+
+      slider { background-color: darken($accent_color, 10%); }
+    }
+  }
 }
 
 
@@ -2807,9 +2877,8 @@ progressbar {
   color: $hint_fg_color;
   font-size: smaller;
 
-  trough { background-color: rgba($progress_color, $lower_opacity); }
-
-  progress { background-color: $progress_color; }
+  trough { border-radius: $circular_radius; background-color: rgba($progress_color, $lower_opacity); }
+  progress { border-radius: $circular_radius; background-color: $progress_color; }
 
   &.osd { // progressbar.osd used for epiphany page loading progress
     // min-width: $bar_size;
