@@ -66,15 +66,15 @@ stage {
   &:focus { @include button(flat-focus); }
 
   &:first-child {
-    border-radius: 0px 0px 0px $button_radius;
+    border-radius: 0px 0px 0px $material_radius;
   }
   &:last-child {
     border-right-width: 0px;
-    border-radius: 0px 0px $button_radius 0px;
+    border-radius: 0px 0px $material_radius 0px;
   }
   &:first-child:last-child {
     border-right-width: 0px;
-    border-radius: 0px 0px $button_radius $button_radius;
+    border-radius: 0px 0px $material_radius $material_radius;
   }
 }
 

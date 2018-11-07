@@ -130,17 +130,17 @@ stage {
 }
 
 .modal-dialog-linked-button:first-child {
-  border-radius: 0px 0px 0px 3px;
+  border-radius: 0px 0px 0px 8px;
 }
 
 .modal-dialog-linked-button:last-child {
   border-right-width: 0px;
-  border-radius: 0px 0px 3px 0px;
+  border-radius: 0px 0px 8px 0px;
 }
 
 .modal-dialog-linked-button:first-child:last-child {
   border-right-width: 0px;
-  border-radius: 0px 0px 3px 3px;
+  border-radius: 0px 0px 8px 8px;
 }
 
 /* Entries */
