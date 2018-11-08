@@ -2723,6 +2723,7 @@ notebook > header.top tabs:not(:only-child):last-child, notebook > header.bottom
 }
 
 notebook > header.top tabs tab.reorderable-page, notebook > header.bottom tabs tab.reorderable-page {
+  margin: 0 -1px;
   border-style: none solid;
 }
 
@@ -2740,6 +2741,7 @@ notebook > header.left tabs:not(:only-child):last-child, notebook > header.right
 }
 
 notebook > header.left tabs tab.reorderable-page, notebook > header.right tabs tab.reorderable-page {
+  margin: -1px 0;
   border-style: solid none;
 }
 
@@ -3721,34 +3723,6 @@ treeview.view radio:indeterminate {
 treeview.view check:checked:disabled, treeview.view check:indeterminate:disabled,
 treeview.view radio:checked:disabled,
 treeview.view radio:indeterminate:disabled {
-  color: rgba(93, 125, 251, 0.5);
-}
-
-treeview.view check:selected,
-treeview.view radio:selected {
-  color: rgba(255, 255, 255, 0.7);
-}
-
-treeview.view check:selected:hover, treeview.view check:selected:active,
-treeview.view radio:selected:hover,
-treeview.view radio:selected:active {
-  color: #FFFFFF;
-}
-
-treeview.view check:selected:disabled,
-treeview.view radio:selected:disabled {
-  color: rgba(255, 255, 255, 0.3);
-}
-
-treeview.view check:selected:checked, treeview.view check:selected:indeterminate,
-treeview.view radio:selected:checked,
-treeview.view radio:selected:indeterminate {
-  color: #5D7DFB;
-}
-
-treeview.view check:selected:checked:disabled, treeview.view check:selected:indeterminate:disabled,
-treeview.view radio:selected:checked:disabled,
-treeview.view radio:selected:indeterminate:disabled {
   color: rgba(93, 125, 251, 0.5);
 }
 

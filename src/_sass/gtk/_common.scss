@@ -2125,7 +2125,12 @@ notebook {
           &:last-child { margin-right: 0; }
         }
 
-        tab.reorderable-page { border-style: none solid; }
+        tab {
+          &.reorderable-page {
+            margin: 0 -1px;
+            border-style: none solid;
+          }
+        }
       }
     }
 
@@ -2140,7 +2145,12 @@ notebook {
           &:last-child { margin-bottom: 0; }
         }
 
-        tab.reorderable-page { border-style: solid none; }
+        tab {
+          &.reorderable-page {
+            margin: -1px 0;
+            border-style: solid none;
+          }
+        }
       }
     }
   }
@@ -2599,18 +2609,6 @@ treeview.view radio {
     &:hover, &:active { color: $fg_color; }
 
     &:disabled { color: $disabled_secondary_fg_color; }
-
-    &:checked, &:indeterminate { color: $accent_color; }
-
-    &:checked:disabled, &:indeterminate:disabled { color: $disabled_accent_color; }
-  }
-
-  &:selected {
-    color: $inverse_secondary_fg_color;
-
-    &:hover, &:active { color: $inverse_fg_color; }
-
-    &:disabled { color: $inverse_disabled_secondary_fg_color; }
 
     &:checked, &:indeterminate { color: $accent_color; }
 
