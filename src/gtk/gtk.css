@@ -726,14 +726,23 @@ button.flat {
   border-radius: 2px;
 }
 
-toolbar .linked > button.text-button.image-button, .titlebar:not(headerbar) .linked > button.text-button.image-button:not(.suggested-action):not(.destructive-action),
+toolbar .linked > button.image-button, .titlebar:not(headerbar) .linked > button.image-button:not(.suggested-action):not(.destructive-action),
+headerbar .linked > button.image-button:not(.suggested-action):not(.destructive-action), actionbar > revealer > box .linked > button.image-button:not(.suggested-action):not(.destructive-action):not(.server-list-button), .app-notification .linked > button.image-button, toolbar .linked > button.text-button.image-button, .titlebar:not(headerbar) .linked > button.text-button.image-button:not(.suggested-action):not(.destructive-action),
 headerbar .linked > button.text-button.image-button:not(.suggested-action):not(.destructive-action), actionbar > revealer > box .linked > button.text-button.image-button:not(.suggested-action):not(.destructive-action):not(.server-list-button), .app-notification .linked > button.text-button.image-button,
+toolbar .linked.vertical > button.image-button,
+.titlebar:not(headerbar) .linked.vertical > button.image-button:not(.suggested-action):not(.destructive-action),
+headerbar .linked.vertical > button.image-button:not(.suggested-action):not(.destructive-action),
+actionbar > revealer > box .linked.vertical > button.image-button:not(.suggested-action):not(.destructive-action):not(.server-list-button),
+.app-notification .linked.vertical > button.image-button,
 toolbar .linked.vertical > button.text-button.image-button,
 .titlebar:not(headerbar) .linked.vertical > button.text-button.image-button:not(.suggested-action):not(.destructive-action),
 headerbar .linked.vertical > button.text-button.image-button:not(.suggested-action):not(.destructive-action),
 actionbar > revealer > box .linked.vertical > button.text-button.image-button:not(.suggested-action):not(.destructive-action):not(.server-list-button),
 .app-notification .linked.vertical > button.text-button.image-button, .linked >
+button.flat.image-button, .linked >
 button.flat.text-button.image-button,
+.linked.vertical >
+button.flat.image-button,
 .linked.vertical >
 button.flat.text-button.image-button {
   border-radius: 2px;
@@ -906,6 +915,7 @@ button {
 }
 
 
+button.image-button,
 headerbar.default-decoration button.titlebutton, check,
 radio, headerbar button.titlebutton, .csd headerbar button.titlebutton,
 .csd headerbar.default-decoration button.titlebutton,

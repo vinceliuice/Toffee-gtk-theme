@@ -437,7 +437,7 @@ button {
       min-width: 24px;
       padding: ($medium_size - 24px) / 2;
 
-//      @extend %circular_button;
+      @extend %circular_button;
     }
 
     &.text-button.image-button {
@@ -463,6 +463,7 @@ button {
 
 //      &.image-button { @extend %circular_button; }
 
+      &.image-button,
       &.text-button.image-button {
         border-radius: $buttons_radius;
         -gtk-outline-radius: $buttons_radius;
@@ -1287,8 +1288,8 @@ headerbar {
 
   // FIXME: This is a hacky workaround.
   .entry-tag {
-    margin-top: 5px;
-    margin-bottom: 5px;
+    margin-top: $container_padding - 1px;
+    margin-bottom: $container_padding - 1px;
   }
 
   &.titlebar,
