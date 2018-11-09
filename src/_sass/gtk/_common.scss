@@ -1276,8 +1276,8 @@ headerbar {
   }
 
   switch {
-    margin-top: ($large_size - 20px) / 2;
-    margin-bottom: ($large_size - 20px) / 2;
+    margin-top: ($large_size - 22px) / 2;
+    margin-bottom: ($large_size - 22px) / 2;
   }
 
   // reset button margins of the spinbutton
@@ -2302,7 +2302,7 @@ scrollbar {
  * Switch *
  **********/
 $switch_width: if($compact == 'false', 42px, 38px);
-$switch_height: if($compact == 'false', 16px, 14px);
+$switch_height: if($compact == 'false', 20px, 16px);
 
 switch {
   transition: $longer_transition;
@@ -2328,7 +2328,7 @@ switch {
     transition: $shorter_duration, $shadow_transition;
     min-width: $switch_height + 4px;
     min-height: $switch_height + 4px;
-    margin: -4px -2px;
+    margin: -4px (0 - $container_padding / 2);
     border-radius: $circular_radius;
     -gtk-outline-radius: $circular_radius;
     box-shadow: $shadow_1;
