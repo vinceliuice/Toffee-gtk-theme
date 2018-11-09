@@ -8226,6 +8226,46 @@ box.vertical > stack > box.vertical > .raven-background > viewport.frame > list 
   border-bottom-right-radius: 2px;
 }
 
+.budgie-polkit-dialog .linked.horizontal > button.suggested-action, .budgie-polkit-dialog .linked.horizontal > button.suggested-action:hover,
+.budgie-session-dialog .linked.horizontal > button.suggested-action,
+.budgie-session-dialog .linked.horizontal > button.suggested-action:hover {
+  color: #5D7DFB;
+}
+
+.budgie-polkit-dialog .linked.horizontal > button.suggested-action:active, .budgie-polkit-dialog .linked.horizontal > button.suggested-action:checked,
+.budgie-session-dialog .linked.horizontal > button.suggested-action:active,
+.budgie-session-dialog .linked.horizontal > button.suggested-action:checked {
+  background-color: #5D7DFB;
+  color: white;
+  border-color: #5D7DFB;
+  box-shadow: none;
+}
+
+.budgie-polkit-dialog .linked.horizontal > button.suggested-action:disabled,
+.budgie-session-dialog .linked.horizontal > button.suggested-action:disabled {
+  opacity: 0.65;
+}
+
+.budgie-polkit-dialog .linked.horizontal > button.destructive-action, .budgie-polkit-dialog .linked.horizontal > button.destructive-action:hover,
+.budgie-session-dialog .linked.horizontal > button.destructive-action,
+.budgie-session-dialog .linked.horizontal > button.destructive-action:hover {
+  color: #FF5252;
+}
+
+.budgie-polkit-dialog .linked.horizontal > button.destructive-action:active, .budgie-polkit-dialog .linked.horizontal > button.destructive-action:checked,
+.budgie-session-dialog .linked.horizontal > button.destructive-action:active,
+.budgie-session-dialog .linked.horizontal > button.destructive-action:checked {
+  background-color: #FF5252;
+  color: white;
+  border-color: #FF5252;
+  box-shadow: none;
+}
+
+.budgie-polkit-dialog .linked.horizontal > button.destructive-action:disabled,
+.budgie-session-dialog .linked.horizontal > button.destructive-action:disabled {
+  opacity: 0.65;
+}
+
 .budgie-polkit-dialog .message {
   color: rgba(255, 255, 255, 0.5);
 }
