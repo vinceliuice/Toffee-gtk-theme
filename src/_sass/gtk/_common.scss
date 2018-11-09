@@ -1276,8 +1276,8 @@ headerbar {
   }
 
   switch {
-    margin-top: ($large_size - 24px) / 2;
-    margin-bottom: ($large_size - 24px) / 2;
+    margin-top: ($large_size - 20px) / 2;
+    margin-bottom: ($large_size - 20px) / 2;
   }
 
   // reset button margins of the spinbutton
@@ -3170,6 +3170,23 @@ messagedialog { // Message Dialog styling
     &:last-child {
       border-bottom-right-radius: 0;
       border-top-right-radius: 0;
+    }
+  }
+
+  @each $b_type, $b_color in (suggested-action, $suggested_color),
+                             (destructive-action, $destructive_color) {
+    .dialog-action-area button.#{$b_type} {
+
+      &, &:hover { color: $b_color; }
+
+      &:active, &:checked {
+        background-color: $b_color;
+        color: white;
+        border-color: $b_color;
+        box-shadow: none;
+      }
+
+      &:disabled { opacity: 0.65; }
     }
   }
 

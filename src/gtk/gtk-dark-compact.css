@@ -1616,8 +1616,8 @@ headerbar button {
 }
 
 headerbar switch {
-  margin-top: 7px;
-  margin-bottom: 7px;
+  margin-top: 9px;
+  margin-bottom: 9px;
 }
 
 headerbar spinbutton button {
@@ -4328,6 +4328,36 @@ messagedialog .dialog-action-area button:last-child {
   border-top-right-radius: 0;
 }
 
+messagedialog .dialog-action-area button.suggested-action, messagedialog .dialog-action-area button.suggested-action:hover {
+  color: #5D7DFB;
+}
+
+messagedialog .dialog-action-area button.suggested-action:active, messagedialog .dialog-action-area button.suggested-action:checked {
+  background-color: #5D7DFB;
+  color: white;
+  border-color: #5D7DFB;
+  box-shadow: none;
+}
+
+messagedialog .dialog-action-area button.suggested-action:disabled {
+  opacity: 0.65;
+}
+
+messagedialog .dialog-action-area button.destructive-action, messagedialog .dialog-action-area button.destructive-action:hover {
+  color: #FF5252;
+}
+
+messagedialog .dialog-action-area button.destructive-action:active, messagedialog .dialog-action-area button.destructive-action:checked {
+  background-color: #FF5252;
+  color: white;
+  border-color: #FF5252;
+  box-shadow: none;
+}
+
+messagedialog .dialog-action-area button.destructive-action:disabled {
+  opacity: 0.65;
+}
+
 messagedialog.csd.background {
   border-bottom-left-radius: 2px;
   border-bottom-right-radius: 2px;
@@ -5548,10 +5578,11 @@ paned.titlebar.horizontal headerbar {
   padding: 3px;
 }
 
-/**************
- * Tweak Tool *
- **************/
+/**********************
+  *  Gnome Tweak Tool  *
+  **********************/
 .tweak-categories {
+  border-radius: 0 0 0 6px;
   background-image: image(#414141);
 }
 
@@ -6117,18 +6148,6 @@ window.background > box.vertical box.horizontal > box.vertical > scrolledwindow 
 window.background > box.vertical box.horizontal > box.vertical > scrolledwindow > viewport.frame > list row.event.activatable.compressed-row-header label.compressed-entries-label, window.background > box.vertical box.horizontal > box.vertical > scrolledwindow > viewport.frame > list .event.compressed-row-header.view label.compressed-entries-label, window.background > box.vertical box.horizontal > box.vertical > scrolledwindow > viewport.frame > list treeview.view header button.event.compressed-row-header label.compressed-entries-label, treeview.view header window.background > box.vertical box.horizontal > box.vertical > scrolledwindow > viewport.frame > list button.event.compressed-row-header label.compressed-entries-label, window.background > box.vertical box.horizontal > box.vertical > scrolledwindow > viewport.frame > list .budgie-menu button.event.compressed-row-header label.compressed-entries-label, .budgie-menu window.background > box.vertical box.horizontal > box.vertical > scrolledwindow > viewport.frame > list button.event.compressed-row-header label.compressed-entries-label {
   background-image: image(#5D7DFB);
   color: #FFFFFF;
-}
-
-/**********************
-  *  Gnome Tweak Tool  *
-  **********************/
-.tweak-categories {
-  border-radius: 0 0 0 6px;
-}
-
-.tweak-titlebar-right > switch,
-dialog.csd > headerbar.titlebar > switch {
-  margin: 12px 0;
 }
 
 /************************

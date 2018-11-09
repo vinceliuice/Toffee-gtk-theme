@@ -422,16 +422,15 @@ paned.titlebar.horizontal { // show border
 }
 
 
-/**************
- * Tweak Tool *
- **************/
-// hard-coded css:
-// https://git.gnome.org/browse/gnome-tweak-tool/tree/data/shell.css
+ /**********************
+  *  Gnome Tweak Tool  *
+  **********************/
 
 // the sidebar
 .tweak-categories {
   // padding: 4px 0;
   // background-color: shade(@theme_bg_color, 0.99);
+  border-radius: 0 0 0 $windows_radius;
   background-image: image($lighter_bg_color);
 
   separator { @extend %hide_separators; }
@@ -1061,18 +1060,6 @@ window.background > box.vertical box.horizontal {
     }
   }
 }
-
-
- /**********************
-  *  Gnome Tweak Tool  *
-  **********************/
-
-// sidebar on gnome tweak
-.tweak-categories { border-radius: 0 0 0 $windows_radius; }
-
-.tweak-titlebar-right,
-dialog.csd > headerbar.titlebar { > switch { margin: 12px 0; } }
-
 
  /************************
   * Gnome Control Center *
