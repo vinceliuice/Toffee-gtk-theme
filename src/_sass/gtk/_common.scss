@@ -437,12 +437,12 @@ button {
       min-width: 24px;
       padding: ($medium_size - 24px) / 2;
 
-      @extend %circular_button;
+//      @extend %circular_button;
     }
 
     &.text-button.image-button {
-      border-radius: $buttons_radius;
-      -gtk-outline-radius: $buttons_radius;
+//      border-radius: $buttons_radius;
+//      -gtk-outline-radius: $buttons_radius;
 
       label {
         &:first-child { margin-left: 16px - ($medium_size - 24px) / 2; }
@@ -3050,7 +3050,9 @@ row {
   }
 
   &:selected { @extend %selected_items; }
+
   & button.circular { margin: 0 4px; } // To show the circular button shadow completely on row
+  & button.image-button { @extend %circular_button; } // Use circular button for image buttons on row
 }
 
 

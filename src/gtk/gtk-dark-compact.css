@@ -693,12 +693,6 @@ button.image-button {
 }
 
 
-button.text-button.image-button {
-  border-radius: 2px;
-  -gtk-outline-radius: 2px;
-}
-
-
 button.text-button.image-button label:first-child {
   margin-left: 12px;
 }
@@ -915,9 +909,8 @@ button {
 }
 
 
-button.image-button,
 headerbar.default-decoration button.titlebutton, check,
-radio, headerbar button.titlebutton, .csd headerbar button.titlebutton,
+radio, row button.image-button, headerbar button.titlebutton, .csd headerbar button.titlebutton,
 .csd headerbar.default-decoration button.titlebutton,
 .titlebar button.titlebutton, .csd .titlebar button.titlebutton,
 .titlebar.default-decoration button.titlebutton,
