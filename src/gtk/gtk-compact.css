@@ -921,7 +921,8 @@ radio, headerbar button.titlebutton, .csd headerbar button.titlebutton,
 .csd headerbar.default-decoration button.titlebutton,
 .titlebar button.titlebutton, .csd .titlebar button.titlebutton,
 .titlebar.default-decoration button.titlebutton,
-.csd .titlebar.default-decoration button.titlebutton, .solid-csd headerbar:not(.default-decoration) button.titlebutton, .nautilus-window headerbar > revealer > button, .raven .raven-header:not(.top) button.image-button, .raven .expander-button,
+.csd .titlebar.default-decoration button.titlebutton, .solid-csd headerbar:not(.default-decoration) button.titlebutton, .nautilus-window headerbar > revealer > button, .terminix-session-sidebar button.tilix-sidebar-close-button,
+.tilix-session-sidebar button.tilix-sidebar-close-button, widget > box.terminal-titlebar > button.image-button, widget > box.terminal-titlebar > button.image-button.toggle, .raven .raven-header:not(.top) button.image-button, .raven .expander-button,
 button.close,
 button.circular {
   border-radius: 9999px;
@@ -1071,15 +1072,15 @@ spinbutton:not(.vertical) entry {
 }
 
 spinbutton:not(.vertical) button {
-  border: solid 4px transparent;
+  border: solid 6px transparent;
 }
 
 spinbutton:not(.vertical) button.up:dir(ltr), spinbutton:not(.vertical) button.down:dir(rtl) {
-  margin-left: -2px;
+  margin-left: -3px;
 }
 
 spinbutton:not(.vertical) button.up:dir(rtl), spinbutton:not(.vertical) button.down:dir(ltr) {
-  margin-right: -2px;
+  margin-right: -3px;
 }
 
 spinbutton.vertical:disabled {
@@ -6302,8 +6303,69 @@ overlay > revealer.right > scrolledwindow.frame {
   background-image: image(#FAFAFA);
 }
 
+.terminix-session-sidebar button.tilix-sidebar-close-button,
+.tilix-session-sidebar button.tilix-sidebar-close-button {
+  min-height: 20px;
+  min-width: 20px;
+  padding: 0;
+  background-color: #FF5252;
+}
+
+.terminix-session-sidebar button.tilix-sidebar-close-button, .terminix-session-sidebar button.tilix-sidebar-close-button:hover, .terminix-session-sidebar button.tilix-sidebar-close-button:active, .terminix-session-sidebar button.tilix-sidebar-close-button:checked,
+.tilix-session-sidebar button.tilix-sidebar-close-button,
+.tilix-session-sidebar button.tilix-sidebar-close-button:hover,
+.tilix-session-sidebar button.tilix-sidebar-close-button:active,
+.tilix-session-sidebar button.tilix-sidebar-close-button:checked {
+  color: white;
+}
+
+.terminix-session-sidebar button.tilix-sidebar-close-button:hover,
+.tilix-session-sidebar button.tilix-sidebar-close-button:hover {
+  background-color: #ff6c6c;
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.12), 0 3px 3px rgba(0, 0, 0, 0.06);
+}
+
+.terminix-session-sidebar button.tilix-sidebar-close-button:active, .terminix-session-sidebar button.tilix-sidebar-close-button:checked,
+.tilix-session-sidebar button.tilix-sidebar-close-button:active,
+.tilix-session-sidebar button.tilix-sidebar-close-button:checked {
+  background-image: image(#ff1f1f);
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.12), 0 3px 3px rgba(0, 0, 0, 0.06);
+}
+
 button.image-button.session-new-button {
   min-width: 28px;
+}
+
+widget > box.terminal-titlebar {
+  padding: 0 6px;
+}
+
+widget > box.terminal-titlebar > button.flat.popup.toggle {
+  border: none;
+  border-radius: 0;
+  padding: 0 8px;
+  border-image: radial-gradient(circle closest-corner at center calc(100% - 1px), #5D7DFB 0%, transparent 0%) 0 0 0/0 0 0;
+}
+
+widget > box.terminal-titlebar > button.flat.popup.toggle:dir(ltr) {
+  padding-right: 6px;
+}
+
+widget > box.terminal-titlebar > button.flat.popup.toggle:dir(rtl) {
+  padding-left: 6px;
+}
+
+widget > box.terminal-titlebar > button.flat.popup.toggle:checked, widget > box.terminal-titlebar > button.flat.popup.toggle:active {
+  border-image: radial-gradient(circle closest-corner at center calc(100% - 1px), #5D7DFB 100%, transparent 0%) 0 0 2/0 0 2px;
+  background-color: transparent;
+  color: rgba(0, 0, 0, 0.75);
+}
+
+widget > box.terminal-titlebar > button.image-button, widget > box.terminal-titlebar > button.image-button.toggle {
+  margin: 2px 0;
+  padding: 0;
+  min-height: 24px;
+  min-width: 24px;
 }
 
 /***********
@@ -6637,6 +6699,9 @@ box.vertical > widget > widget:selected {
   background-color: #5D7DFB;
 }
 
+/***********
+ *  xfce4  *
+ ***********/
 .xfce4-panel button.flat, .xfce4-panel button {
   color: rgba(255, 255, 255, 0.7);
   border-radius: 0;
@@ -8322,7 +8387,7 @@ box.vertical > stack > box.vertical > .raven-background > viewport.frame > list 
    use responsibly! */
 /*
 widget text/foreground color */
-@define-color theme_fg_color currentColor;
+@define-color theme_fg_color rgba(0, 0, 0, 0.75);
 /*
 text color for entries, views and content in general */
 @define-color theme_text_color currentColor;
@@ -8349,7 +8414,7 @@ insensitive text widgets and the like base background color */
 @define-color insensitive_base_color #FAFAFA;
 /*
 widget text/foreground color on backdrop windows */
-@define-color theme_unfocused_fg_color currentColor;
+@define-color theme_unfocused_fg_color rgba(0, 0, 0, 0.75);
 /*
 text color for entries, views and content in general on backdrop windows */
 @define-color theme_unfocused_text_color currentColor;
@@ -8370,10 +8435,10 @@ insensitive color on backdrop windows */
 @define-color unfocused_insensitive_color alpha(currentColor, 0.5);
 /*
 widgets main borders color */
-@define-color borders rgba(0, 0, 0, 0.08);
+@define-color borders alpha(currentColor, 0.12);
 /*
 widgets main borders color on backdrop windows */
-@define-color unfocused_borders rgba(0, 0, 0, 0.08);
+@define-color unfocused_borders alpha(currentColor, 0.12);
 /*
 these are pretty self explicative */
 @define-color warning_color #FF6D00;

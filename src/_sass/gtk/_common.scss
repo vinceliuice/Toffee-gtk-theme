@@ -787,17 +787,17 @@ spinbutton {
 
     button {
       // margin: $container_padding;
-      border: solid $container_padding transparent;
+      border: solid 6px transparent;
 
       @extend %simple_flat_button;
 
       @extend %small_button;
 
       &.up:dir(ltr),
-      &.down:dir(rtl) { margin-left: -$container_padding / 2; }
+      &.down:dir(rtl) { margin-left: -3px; }
 
       &.up:dir(rtl),
-      &.down:dir(ltr) { margin-right: -$container_padding / 2; }
+      &.down:dir(ltr) { margin-right: -3px; }
     }
   }
 

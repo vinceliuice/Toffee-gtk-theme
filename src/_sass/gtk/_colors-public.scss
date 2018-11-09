@@ -6,8 +6,10 @@
 // Sass thinks we're using the colors in the variables as strings and may shoot
 // warning, it's innocuous and can be defeated by using "" + $var
 
-$theme_fg_color: currentColor;
+$theme_fg_color: $fg_color;
+$theme_text_color: currentColor;
 $insensitive_fg_color: gtkalpha(currentColor, 0.5);
+$theme_border_color: gtkalpha(currentColor, 0.12);
 
 /*
 widget text/foreground color */
@@ -15,7 +17,7 @@ widget text/foreground color */
 
 /*
 text color for entries, views and content in general */
-@define-color theme_text_color #{"" + $theme_fg_color};
+@define-color theme_text_color #{"" + $theme_text_color};
 
 /*
 widget base background color */
@@ -51,7 +53,7 @@ widget text/foreground color on backdrop windows */
 
 /*
 text color for entries, views and content in general on backdrop windows */
-@define-color theme_unfocused_text_color #{"" + $theme_fg_color};
+@define-color theme_unfocused_text_color #{"" + $theme_text_color};
 
 /*
 widget base background color on backdrop windows */
@@ -75,11 +77,11 @@ insensitive color on backdrop windows */
 
 /*
 widgets main borders color */
-@define-color borders #{"" + $border_color};
+@define-color borders #{"" + $theme_border_color};
 
 /*
 widgets main borders color on backdrop windows */
-@define-color unfocused_borders #{"" + $border_color};
+@define-color unfocused_borders #{"" + $theme_border_color};
 
 /*
 these are pretty self explicative */
