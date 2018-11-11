@@ -5406,7 +5406,7 @@ dialog.background > box.dialog-vbox.vertical > grid.horizontal > box.horizontal:
 
 .nautilus-window placessidebar.sidebar row.sidebar-row {
   transition: none;
-  padding-left: 8px;
+  padding-left: 6px;
 }
 
 .nautilus-window placessidebar.sidebar row.sidebar-row image.sidebar-icon {
@@ -5440,7 +5440,6 @@ dialog.background > box.dialog-vbox.vertical > grid.horizontal > box.horizontal:
 
 .nautilus-window placessidebar.sidebar row.sidebar-row:selected {
   background-color: transparent;
-  font-weight: bold;
 }
 
 .nautilus-window placessidebar.sidebar row.sidebar-row:selected:active {

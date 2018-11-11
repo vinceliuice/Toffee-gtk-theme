@@ -250,7 +250,7 @@ dialog.background > box.dialog-vbox.vertical > grid.horizontal {
 
     row.sidebar-row {
       transition: none;
-      padding-left: 8px;
+      padding-left: 6px;
 
       &:selected button.sidebar-button  { @extend %selected_sidebar_button; }
 
@@ -273,7 +273,7 @@ dialog.background > box.dialog-vbox.vertical > grid.horizontal {
 
       &:selected {
         background-color: transparent;
-        font-weight: bold;
+        // font-weight: bold;
 
         &:active { box-shadow: none; }
       }
