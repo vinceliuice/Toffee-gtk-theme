@@ -27,7 +27,7 @@ overlay > revealer {
     &, &:hover, &:active, &:checked { color: white; }
 
     &:hover {
-      background-color: lighten($destructive_color, 5%);
+      background-image: image(lighten($destructive_color, 5%));
       box-shadow: $shadow_2;
     }
 
@@ -577,4 +577,3 @@ window.thunar {
     header.top tab.reorderable-page > box > label { min-height: 0; }
   }
 }
-

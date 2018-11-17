@@ -3051,8 +3051,9 @@ row {
 
   &:selected { @extend %selected_items; }
 
-  & button.circular { margin: 0 4px; } // To show the circular button shadow completely on row
-  & button.image-button { @extend %circular_button; } // Use circular button for image buttons on row
+  button.circular { margin: 0 4px; } // To show the circular button shadow completely on row
+  button.image-button { @extend %circular_button; } // Use circular button for image buttons on row
+  .linked button { @extend %linked; }
 }
 
 
@@ -3061,9 +3062,7 @@ row {
  *********************/
 .app-notification {
   @extend %osd;
-
   @extend toolbar.osd;
-
   margin: 8px;
 
   button { @extend %button_basic.flat; }
