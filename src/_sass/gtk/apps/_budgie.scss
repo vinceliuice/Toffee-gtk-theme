@@ -768,6 +768,10 @@ box.vertical > stack > box.vertical {
           &:last-child { border-bottom: none; }
 
           &:selected {
+            // background-color: rgba($fg_color, 0.06);
+          }
+
+          &:hover {
             background-color: rgba($fg_color, 0.06);
           }
 
@@ -779,7 +783,7 @@ box.vertical > stack > box.vertical {
             @extend %budgie_button;
 
             &, &:hover, &:active, &:checked {
-              box-shadow: 0 0 100px rgba($fg_color, 0.06); // use shadow reset background
+              // box-shadow: 0 0 100px rgba($fg_color, 0.06); // use shadow reset background
             }
 
             image { padding: 0; }
