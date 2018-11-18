@@ -6465,6 +6465,7 @@ window.background:not(.csd) > widget > radiobutton > radio:not(:checked):disable
 window.background:not(.csd) > window > menu,
 window.background:not(.csd) > menu > menu {
   border: none;
+  border-radius: 0;
 }
 
 window.background:not(.csd) > window > menu menuitem:hover,
@@ -6524,7 +6525,7 @@ window.background:not(.csd) > window.background > menu > separator {
 #MozillaGtkWidget.background headerbar.titlebar.default-decoration button.titlebutton {
   min-width: 20px;
   min-height: 20px;
-  margin: 0 2px;
+  margin: 6px 2px;
   padding: 0;
   color: rgba(255, 255, 255, 0.7);
   background-color: transparent;
@@ -6559,6 +6560,35 @@ window.background:not(.csd) > window.background > menu > separator {
   padding: 0;
   border: none;
   background-color: rgba(0, 0, 0, 0.08);
+}
+
+#MozillaGtkWidget.background > window.background > menu > menuitem > radio:checked, #MozillaGtkWidget.background > window.background > menu > menuitem > radio:indeterminate,
+#MozillaGtkWidget.background > window.background > menu > menuitem > check:checked,
+#MozillaGtkWidget.background > window.background > menu > menuitem > check:indeterminate {
+  color: #5D7DFB;
+}
+
+#MozillaGtkWidget.background > window.background > menu > menuitem > radio:checked:disabled, #MozillaGtkWidget.background > window.background > menu > menuitem > radio:indeterminate:disabled,
+#MozillaGtkWidget.background > window.background > menu > menuitem > check:checked:disabled,
+#MozillaGtkWidget.background > window.background > menu > menuitem > check:indeterminate:disabled {
+  color: rgba(93, 125, 251, 0.5);
+}
+
+#MozillaGtkWidget.background > window.background > menu > menuitem > radio:not(:checked):not(:indeterminate):not(:disabled):not(:hover),
+#MozillaGtkWidget.background > window.background > menu > menuitem > check:not(:checked):not(:indeterminate):not(:disabled):not(:hover) {
+  color: rgba(0, 0, 0, 0.54);
+}
+
+#MozillaGtkWidget.background > window.background > menu > menuitem > radio:hover, #MozillaGtkWidget.background > window.background > menu > menuitem > radio:checked:hover, #MozillaGtkWidget.background > window.background > menu > menuitem > radio:indeterminate:hover,
+#MozillaGtkWidget.background > window.background > menu > menuitem > check:hover,
+#MozillaGtkWidget.background > window.background > menu > menuitem > check:checked:hover,
+#MozillaGtkWidget.background > window.background > menu > menuitem > check:indeterminate:hover {
+  color: #FFFFFF;
+}
+
+#MozillaGtkWidget.background > window.background > menu > menuitem > radio:disabled,
+#MozillaGtkWidget.background > window.background > menu > menuitem > check:disabled {
+  color: rgba(255, 255, 255, 0.5);
 }
 
 /*************
