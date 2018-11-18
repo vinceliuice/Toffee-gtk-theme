@@ -4994,7 +4994,7 @@ headerbar,
   background-color: rgba(255, 255, 255, 0.12);
 }
 
-.solid-csd headerbar:not(.default-decoration) button.titlebutton.close, headerbar button.titlebutton.close, .csd headerbar button.titlebutton.close, headerbar.default-decoration button.titlebutton.close,
+.solid-csd headerbar:not(.default-decoration) button.titlebutton.close, #MozillaGtkWidget.background headerbar.titlebar.default-decoration button.titlebutton.close, headerbar button.titlebutton.close, .csd headerbar button.titlebutton.close, headerbar.default-decoration button.titlebutton.close,
 .csd headerbar.default-decoration button.titlebutton.close,
 .titlebar button.titlebutton.close, .csd
 .titlebar button.titlebutton.close,
@@ -5004,7 +5004,7 @@ headerbar,
   transition: background-size 0, background-image 0, box-shadow 100ms cubic-bezier(0, 0, 0.2, 1);
 }
 
-.solid-csd headerbar:not(.default-decoration) button.titlebutton.close:hover, headerbar button.titlebutton.close:hover, .csd headerbar button.titlebutton.close:hover, headerbar.default-decoration button.titlebutton.close:hover,
+.solid-csd headerbar:not(.default-decoration) button.titlebutton.close:hover, #MozillaGtkWidget.background headerbar.titlebar.default-decoration button.titlebutton.close:hover, headerbar button.titlebutton.close:hover, .csd headerbar button.titlebutton.close:hover, headerbar.default-decoration button.titlebutton.close:hover,
 .csd headerbar.default-decoration button.titlebutton.close:hover,
 .titlebar button.titlebutton.close:hover, .csd
 .titlebar button.titlebutton.close:hover,
@@ -5018,7 +5018,7 @@ headerbar,
   box-shadow: 0 2px 2px rgba(0, 0, 0, 0.12), 0 3px 3px rgba(0, 0, 0, 0.06);
 }
 
-.solid-csd headerbar:not(.default-decoration) button.titlebutton.close:active, .solid-csd headerbar:not(.default-decoration) button.titlebutton.close:checked, headerbar button.titlebutton.close:active, headerbar button.titlebutton.close:checked, .csd headerbar button.titlebutton.close:active, .csd headerbar button.titlebutton.close:checked, headerbar.default-decoration button.titlebutton.close:active, headerbar.default-decoration button.titlebutton.close:checked,
+.solid-csd headerbar:not(.default-decoration) button.titlebutton.close:active, #MozillaGtkWidget.background headerbar.titlebar.default-decoration button.titlebutton.close:active, .solid-csd headerbar:not(.default-decoration) button.titlebutton.close:checked, #MozillaGtkWidget.background headerbar.titlebar.default-decoration button.titlebutton.close:checked, headerbar button.titlebutton.close:active, headerbar button.titlebutton.close:checked, .csd headerbar button.titlebutton.close:active, .csd headerbar button.titlebutton.close:checked, headerbar.default-decoration button.titlebutton.close:active, headerbar.default-decoration button.titlebutton.close:checked,
 .csd headerbar.default-decoration button.titlebutton.close:active,
 .csd headerbar.default-decoration button.titlebutton.close:checked,
 .titlebar button.titlebutton.close:active,
@@ -6507,6 +6507,58 @@ window.background:not(.csd) > widget > radiobutton > radio {
 
 window.background:not(.csd) > window.background > menu > separator {
   color: rgba(255, 255, 255, 0.08);
+}
+
+#MozillaGtkWidget.background {
+  background-color: #363636;
+}
+
+#MozillaGtkWidget.background, #MozillaGtkWidget.background decoration {
+  border-radius: 2px 2px 0 0;
+}
+
+#MozillaGtkWidget.background headerbar.titlebar {
+  border-radius: 2px 2px 0 0;
+}
+
+#MozillaGtkWidget.background headerbar.titlebar.default-decoration button.titlebutton {
+  min-width: 20px;
+  min-height: 20px;
+  margin: 0 2px;
+  padding: 0;
+  color: rgba(255, 255, 255, 0.7);
+  background-color: transparent;
+}
+
+#MozillaGtkWidget.background .background,
+#MozillaGtkWidget.background frame,
+#MozillaGtkWidget.background separator,
+#MozillaGtkWidget.background scrolledwindow {
+  background-color: #323232;
+}
+
+#MozillaGtkWidget.background scrollbar {
+  background-color: #212121;
+}
+
+#MozillaGtkWidget.background *:not(menuitem):hover, #MozillaGtkWidget.background *:not(menuitem):hover button,
+#MozillaGtkWidget.background *:focus,
+#MozillaGtkWidget.background *:focus button,
+#MozillaGtkWidget.background *:active,
+#MozillaGtkWidget.background *:active button,
+#MozillaGtkWidget.background *:checked,
+#MozillaGtkWidget.background *:checked button {
+  color: #FFFFFF;
+}
+
+#MozillaGtkWidget.background > window.background > menu {
+  background-color: #3a3a3a;
+}
+
+#MozillaGtkWidget.background > window.background > menu > separator {
+  padding: 0;
+  border: none;
+  background-color: rgba(255, 255, 255, 0.08);
 }
 
 /*************

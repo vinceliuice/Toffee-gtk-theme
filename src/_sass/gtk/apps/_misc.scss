@@ -188,6 +188,62 @@ window.background:not(.csd) {
   > window.background > menu > separator { color: $border_color; }
 }
 
+//
+// Firefox Quantum
+//
+
+#MozillaGtkWidget.background {
+  &, decoration { border-radius: 2px 2px 0 0; } // enforce radius
+
+  // FIXME: unset all our specific titlebuttons
+  // until upstream stops rendering useless (weird) icons
+  headerbar.titlebar {
+    border-radius: 2px 2px 0 0;
+
+    &.default-decoration button.titlebutton {
+      min-width: 20px;
+      min-height: 20px;
+      margin: 0 2px;
+      padding: 0;
+      color: $titlebar_secondary_fg_color;
+      background-color: transparent;
+      &.close { @extend %windows_close_button; }
+    }
+  }
+
+  // blend with weird toolbar backgrounds
+  background-color: $alt_base_color;
+
+  // FIXME: resetting child elements background is not fully functional yet
+  // because WidgetStyleCache keeps holding initial background-color.
+  // the stem of this incorrect colouring seems to be caused by their
+  // gdk_rgba to ns_rgba conversion. I don't think theme's fault.
+  .background,
+  frame,
+  separator,
+  scrolledwindow { background-color: $bg_color; }
+
+  scrollbar { background-color: $darker_bg_color; }
+
+  *:not(menuitem):hover, // exclude menuitem node
+  *:focus,
+  *:active,
+  *:checked {
+    &, button { color: $fg_color; } // enforce opaque foregrounds
+  }
+
+  > window.background > menu { // context-menus
+    background-color: $base_color;
+
+    // revert to standard separators
+    > separator {
+      padding: 0;
+      border: none;
+      background-color: $border_color;
+    }
+  }
+}
+
 
  /*************
   * RhythmBox *
