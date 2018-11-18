@@ -45,9 +45,9 @@ Usage:  `./Install`  **[OPTIONS...]**
 |  OPTIONS:           | |
 |:--------------------|:-------------|
 |-d, --dest           | Specify theme destination directory (Default: $HOME/.themes)|
-|-n, --name           | Specify theme name (Default: Sierra)|
-|-c, --color          | Specify theme color variant(s) **[light/dark]** (Default: All variants)|
-|-o, --opacity        | Specify theme opacity variant(s) **[standard/solid]** (Default: All variants)|
+|-n, --name           | Specify theme name (Default: Toffee)|
+|-c, --color          | Specify theme color variant(s) **[standard/dark/light]** (Default: All variants)|
+|-s, --size           | Specify theme size variant **[standard/compact]** (Default: All variants)||
 |-g, --gdm            | Install GDM theme|
 |-h, --help           | Show this help|
 
