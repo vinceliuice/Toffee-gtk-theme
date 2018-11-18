@@ -38,5 +38,22 @@ Run
     ./install.sh
 
 
-## Screenshots
+#### Install tips
 
+Usage:  `./Install`  **[OPTIONS...]**
+
+|  OPTIONS:           | |
+|:--------------------|:-------------|
+|-d, --dest           | Specify theme destination directory (Default: $HOME/.themes)|
+|-n, --name           | Specify theme name (Default: Sierra)|
+|-c, --color          | Specify theme color variant(s) **[light/dark]** (Default: All variants)|
+|-o, --opacity        | Specify theme opacity variant(s) **[standard/solid]** (Default: All variants)|
+|-g, --gdm            | Install GDM theme|
+|-h, --help           | Show this help|
+
+## Screenshots
+![01](https://github.com/vinceliuice/Toffee-gtk-theme/blob/images/screenshot01.jpeg?raw=true)
+![02](https://github.com/vinceliuice/Toffee-gtk-theme/blob/images/screenshot02.jpeg?raw=true)
+![03](https://github.com/vinceliuice/Toffee-gtk-theme/blob/images/screenshot03.jpeg?raw=true)
+![04](https://github.com/vinceliuice/Toffee-gtk-theme/blob/images/screenshot04.jpeg?raw=true)
+![05](https://github.com/vinceliuice/Toffee-gtk-theme/blob/images/screenshot05.jpeg?raw=true)
