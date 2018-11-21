@@ -151,15 +151,24 @@ window.background:not(.csd) {
     }
   }
 
+  .menu { // context-menus
+    border-radius: 2px;
+//    border: none;
+  }
+
   > window > menu,
   > menu > menu {
     border: none; // remove ugly border around the menus
-    border-radius: 0;
 
-    menuitem:hover {
-      background-color: $primary_color;
-      &, image { color: $inverse_fg_color; }
-      accelerator { color: $inverse_secondary_fg_color; }
+    menuitem {
+      transition: none; // Fixed plank menu background issue
+
+      &:hover {
+        background-color: $primary_color;
+
+        &, image { color: $inverse_fg_color; }
+        accelerator { color: $inverse_secondary_fg_color; }
+      }
     }
   }
 }

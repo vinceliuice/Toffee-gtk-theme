@@ -1692,7 +1692,6 @@ menuitem {
     color: $opaque_fg_color;
 
     &:hover { background-color: $opaque_divider_color; }
-
     &:disabled { color: $opaque_disabled_fg_color; } // separator/border also use this color.
 
     accelerator { color: $opaque_secondary_fg_color; }
