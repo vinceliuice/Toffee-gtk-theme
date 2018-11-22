@@ -5415,31 +5415,24 @@ dialog.background > box.dialog-vbox.vertical > grid.horizontal > box.horizontal:
 }
 
 .nautilus-window placessidebar.sidebar row.sidebar-row:hover {
-  color: #5D7DFB;
-  background-color: rgba(255, 255, 255, 0.03);
-  box-shadow: inset 2px 0 #5D7DFB;
-}
-
-.nautilus-window placessidebar.sidebar row.sidebar-row:hover image.sidebar-icon {
-  color: rgba(93, 125, 251, 0.65);
+  background-color: rgba(255, 255, 255, 0);
 }
 
 .nautilus-window placessidebar.sidebar row.sidebar-row:backdrop {
   opacity: 0.85;
 }
 
-.nautilus-window placessidebar.sidebar row.sidebar-row:selected label.sidebar-label,
-.nautilus-window placessidebar.sidebar row.sidebar-row:selected:hover label.sidebar-label {
+.nautilus-window placessidebar.sidebar row.sidebar-row:selected {
+  background-color: rgba(255, 255, 255, 0.03);
+  box-shadow: inset 2px 0 #5D7DFB;
+}
+
+.nautilus-window placessidebar.sidebar row.sidebar-row:selected label.sidebar-label {
   color: #5D7DFB;
 }
 
-.nautilus-window placessidebar.sidebar row.sidebar-row:selected image.sidebar-icon,
-.nautilus-window placessidebar.sidebar row.sidebar-row:selected:hover image.sidebar-icon {
+.nautilus-window placessidebar.sidebar row.sidebar-row:selected image.sidebar-icon {
   color: rgba(93, 125, 251, 0.65);
-}
-
-.nautilus-window placessidebar.sidebar row.sidebar-row:selected {
-  background-color: transparent;
 }
 
 .nautilus-window placessidebar.sidebar row.sidebar-row:selected:active {

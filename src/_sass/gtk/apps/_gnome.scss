@@ -49,7 +49,6 @@
 .nautilus-window headerbar {
 
   .path-bar-box { // Fixed nautilus 3.30 pathbar
-
     button { @extend %pathbar_box_button; }
 
     &.width-maximized {
@@ -257,23 +256,18 @@ dialog.background > box.dialog-vbox.vertical > grid.horizontal {
       image.sidebar-icon { color: $hint_fg_color; padding-right: 10px; }
 
       &:hover {
-        color: $primary_color;
-        background-color: rgba($divider_color, 0.03);
-        box-shadow: inset 2px 0 $primary_color;
-        image.sidebar-icon { color: rgba($primary_color, 0.65); }
+        background-color: rgba($divider_color, 0.0);
       }
 
       &:backdrop { opacity: 0.85; }
 
-      &:selected label.sidebar-label,
-      &:selected:hover label.sidebar-label { color: $primary_color; }
-
-      &:selected image.sidebar-icon,
-      &:selected:hover image.sidebar-icon { color: rgba($primary_color, 0.65); }
-
       &:selected {
-        background-color: transparent;
+        background-color: rgba($divider_color, 0.03);
+        box-shadow: inset 2px 0 $primary_color;
         // font-weight: bold;
+
+        label.sidebar-label { color: $primary_color; }
+        image.sidebar-icon { color: rgba($primary_color, 0.65); }
 
         &:active { box-shadow: none; }
       }
