@@ -187,12 +187,11 @@ dialog.background > box.dialog-vbox.vertical > grid.horizontal {
   > scrolledwindow.frame { border-style: none; }
 
   > box.horizontal:last-child {
-    margin: -6px 0 0 -6px;
+    // margin: -6px 0 0 -6px;
     border-top: 1px solid $border_color;
 
     > label { margin: 0 8px; }
-
-    > box > button { border-radius: 0; }
+    // > box > button { border-radius: 0; }
   }
 }
 
@@ -337,7 +336,6 @@ dialog.background > box.dialog-vbox.vertical > grid.horizontal {
       padding-right: $buttons_width;
 
       .gedit-search-entry-occurrences-tag { margin-left: $container_padding; }
-
       image.right { margin-right: 0; }
     }
 
@@ -354,14 +352,12 @@ dialog.background > box.dialog-vbox.vertical > grid.horizontal {
       color: $inverse_secondary_fg_color;
 
       &:hover, &:active { color: $inverse_fg_color; }
-
       &:disabled { color: $inverse_disabled_secondary_fg_color; }
     }
   }
 
   button {
     border: solid $container_padding transparent;
-
     @extend %simple_flat_button;
 
     &:dir(ltr),
@@ -385,7 +381,6 @@ paned.titlebar.horizontal { // show border
 }
 
 .gedit-side-panel-paned.horizontal {
-
   // 'file-browser' pane
   > box.vertical > stack > grid.horizontal {
     padding: 3px 3px 0;
@@ -412,6 +407,17 @@ paned.titlebar.horizontal { // show border
 
       row.activatable { padding: 3px; }
     }
+
+    // 'files' pane
+    stack {
+      scrolledwindow {
+        viewport.frame {
+          list.gedit-document-panel {
+            background: none;
+          }
+        }
+      }
+    }
   }
 }
 
@@ -419,7 +425,6 @@ paned.titlebar.horizontal { // show border
  /**********************
   *  Gnome Tweak Tool  *
   **********************/
-
 // the sidebar
 .tweak-categories {
   // padding: 4px 0;
@@ -879,8 +884,7 @@ GdMainIconView.content-view {
   frame.content-view > border { border-style: none; }
 }
 
-.photos-icon-bg {
-}
+// .photos-icon-bg { }
 
 .photos-fade-in {
   opacity: 1;
@@ -900,6 +904,26 @@ overlay grid.horizontal > revealer > scrolledwindow.frame {
   &:dir(rtl) { border-style: none solid none none; }
 }
 
+// documents-scrolledwi (Totem, Documents, EvView)
+.documents-scrolledwin {
+  background-color: transparent;
+
+  .content-view {
+    background-color: transparent;
+    border-radius: 0 0 $windows_radius $windows_radius;
+  }
+
+  viewport.frame { // Documents
+    background-color: transparent;
+
+    widget > frame.content-view {
+      border { border: none; }
+
+      background-color: transparent;
+      border-radius: 0 0 $windows_radius $windows_radius;
+    }
+  }
+}
 
 /*********
  * Music *
@@ -958,14 +982,38 @@ box.vertical > revealer > toolbar.search-bar {
   }
 }
 
+/*******************
+ * Archive Manager *
+ *******************/
+.background.csd {
+  > grid.horizontal > paned.horizontal {
+    > scrolledwindow {
+      border-radius: 0 0 $windows_radius $windows_radius;
+      background-color: $base_color;
 
- /**************
-  * Gnome-Logs *
-  **************/
+      treeview.view:not(:hover):not(:selected) {
+        background-color: transparent;
+      }
+    }
 
+    > box.vertical {
+      > scrolledwindow {
+        border-radius: 0 0 0 $windows_radius;
+        background-color: $bg_color;
+
+        treeview.view:not(:hover):not(:selected) {
+          background-color: transparent;
+        }
+      }
+    }
+  }
+}
+
+/**************
+ * Gnome-Logs *
+ **************/
 // titles inside the button!?
 headerbar > button.flat.popup.title-menu-button.toggle {
-
   > grid {
     .title {
       margin: -3px 0;
@@ -1058,9 +1106,13 @@ window.background > box.vertical box.horizontal {
  /************************
   * Gnome Control Center *
   ************************/
+window.background.csd > stack {
+  border-radius: 0 0 $windows_radius $windows_radius;
+}
+
+stack.background { background: none; }
 
 // users section
-
 stack > box.vertical > widget > overlay grid.horizontal > stack {
   > button.toggle { margin: 8px 6px; } // Show the button shadow completely
 }
@@ -1072,9 +1124,81 @@ box.horizontal.titlebar > headerbar > stack > box.vertical {
 
 dialog.background.csd {
   > headerbar.titlebar {
-
     > label:not(.title):not(.subtitle) {
       font-weight: 700;
+    }
+  }
+}
+
+// > 3.25.90
+.background.csd scrolledwindow.view {
+  background-color: $base_color;
+  border-bottom-left-radius: $windows_radius;
+
+  > viewport.frame > stack {
+    background-color: transparent;
+
+    > list { // left-pane
+      background-color: transparent;
+
+      > row.activatable:not(:hover):not(:active):not(:selected) {
+        background-color: transparent;
+      }
+    }
+  }
+}
+
+/************************
+ * Gnome system monitor *
+ ************************/
+window#gnome-system-monitor.background.csd {
+  > box.vertical > stack {
+    background-color: $base_color;
+    border-radius: 0 0 $windows_radius $windows_radius;
+
+    > box.vertical > scrolledwindow {
+      treeview.view {
+        background: none;
+        @extend %view;
+      }
+    }
+  }
+}
+
+/************************
+ * Gnome sound recorder *
+ ************************/
+stack {
+  > grid.vertical {
+    > scrolledwindow.frame {
+      border: none;
+
+      > viewport.frame {
+        list {
+          border-radius: 0 0 $windows_radius $windows_radius;
+        }
+      }
+    }
+
+    scrolledwindow.frame.emptyGrid { border: none; } // Removed ugly borders
+  }
+}
+
+/******************
+ * Gnome Contacts *
+ ******************/
+window.background.csd {
+  > overlay > grid.horizontal {
+    > frame:dir(ltr) > border { // Removed ugly borders
+      border-top-width: 0;
+      border-left-width: 0;
+      border-bottom-width: 0;
+    }
+
+    > overlay > stack > box.horizontal > grid.horizontal {
+      > scrolledwindow.contacts-contact-form {
+        border-bottom-right-radius: $windows_radius;
+      }
     }
   }
 }
@@ -1082,7 +1206,6 @@ dialog.background.csd {
  /******************
   * Gnome calender *
   ******************/
-
 popover.background {
   datechooser {
     day.day.other-month {
@@ -1191,6 +1314,38 @@ button.title label { min-height: $medium_size; }
 
 .geary-titlebar-right {
   &:dir(ltr) { margin-left: -5px; }
-
   &:dir(rtl) { margin-right: -5px; }
+}
+
+/***********
+ * Dialogs *
+ ***********/
+dialog.background.csd {
+  box.dialog-vbox {
+    grid.horizontal {
+      > scrolledwindow.frame {
+        > viewport.frame {
+          list:first-child { border-radius: 0 0 0 $windows_radius; }
+          list:last-child { border-radius: 0 0 $windows_radius 0; }
+        }
+      }
+    }
+
+    > stack,
+    > stack > stack {
+      > scrolledwindow {
+        border-radius: 0 0 $windows_radius $windows_radius;
+        background-color: $base_color;
+
+        iconview.view:not(:hover):not(:selected):not(:active) { // Wallpaper setting window
+          // @extend %view;
+          background-color: transparent;
+        }
+      }
+    }
+
+    notebook > stack {
+      border-radius: 0 0 $windows_radius $windows_radius;
+    }
+  }
 }
