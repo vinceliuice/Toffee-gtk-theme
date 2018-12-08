@@ -92,8 +92,6 @@ notebook:focus tab,
 
   &:disabled { color: $disabled_fg_color; }
 
-  &:hover, &:active, &:selected { border-radius: $buttons_radius; }
-
   selection,
   &:selected { @extend %selected_items; }
 }

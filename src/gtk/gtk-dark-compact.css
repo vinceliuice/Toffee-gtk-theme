@@ -104,13 +104,6 @@ window#gnome-system-monitor.background.csd > box.vertical > stack > box.vertical
   color: rgba(255, 255, 255, 0.5);
 }
 
-window#gnome-system-monitor.background.csd > box.vertical > stack > box.vertical > scrolledwindow treeview.view:hover, window#gnome-system-monitor.background.csd > box.vertical > stack > box.vertical > scrolledwindow treeview.view:active, window#gnome-system-monitor.background.csd > box.vertical > stack > box.vertical > scrolledwindow treeview.view:selected,
-.view:hover,
-.view:active,
-.view:selected {
-  border-radius: 2px;
-}
-
 textview text {
   background-color: #3a3a3a;
 }
