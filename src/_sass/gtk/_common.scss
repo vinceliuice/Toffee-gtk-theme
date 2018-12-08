@@ -2616,12 +2616,12 @@ treeview.view radio:checked {
 scale {
   // sizing
   $_marks_length: 8px;
-  $_marks_distance: 8px;
+  $_marks_distance: 7px;
 
   $trough_size: 2px;
 
-  $slider_size: 24px;
-  $marks_slider_size: 30px;
+  $slider_size: 32px;
+  $marks_slider_size: 38px;
 
   $slider_margin: -($slider_size - $trough_size) / 2;
   $marks_slider_margin: -($marks_slider_size - $trough_size) - $slider_margin;
