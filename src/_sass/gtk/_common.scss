@@ -402,13 +402,9 @@ button {
     @include button(normal);
 
     &:hover { @include button(hover); }
-
     &:active { @include button(active); }
-
     &:disabled { @include button(disabled); }
-
     &:checked { @include button(checked); }
-
     &:checked:disabled { @include button(checked-disabled); }
 
     @at-root %flat_button, &.flat {
@@ -416,14 +412,11 @@ button {
         @include button(flat-normal);
 
         &:hover { @include button(flat-hover); }
-
         &:active { @include button(flat-active); }
-
         &:disabled { @include button(flat-disabled); }
       }
 
       &:checked { @include button(flat-checked); }
-
       &:checked:disabled { @include button(flat-checked-disabled); }
     }
 
@@ -445,7 +438,6 @@ button {
 
       label {
         &:first-child { margin-left: 16px - ($medium_size - 24px) / 2; }
-
         &:last-child { margin-right: 16px - ($medium_size - 24px) / 2; }
       }
 
@@ -453,7 +445,6 @@ button {
     }
 
     .linked > & { @extend %linked; }
-
     .linked.vertical > & { @extend %linked_vertical; }
 
     .linked > &.flat,
@@ -484,7 +475,6 @@ button {
       color: $inverse_secondary_fg_color;
 
       &:hover, &:active { color: $inverse_fg_color; }
-
       &:disabled { color: $inverse_disabled_secondary_fg_color; }
 
       &:checked {
@@ -520,7 +510,6 @@ button {
       color: $inverse_fg_color;
 
       &:disabled { @include button(disabled, $b_color); }
-
       &:checked { background-color: mix($inverse_fg_color, $b_color, percentage($lower_opacity)); }
 
       &.flat {
@@ -528,12 +517,10 @@ button {
         color: $b_color;
 
         &:disabled { @include button(flat-disabled, $b_color); }
-
         &:checked { background-color: rgba($b_color, 0.3); }
       }
 
-      .osd & {
-      }
+      // .osd & { }
     }
   }
 
@@ -617,7 +604,7 @@ button {
 }
 
 %needs_attention {
-  animation: needs_attention $longer_duration $deceleration_curve forwards;
+  animation: needs_attention $shorter_duration $deceleration_curve forwards;
   background-repeat: no-repeat;
   background-position: right 3px;
   background-size: 6px 6px;
@@ -1124,7 +1111,7 @@ headerbar {
     // FIXME: 0.00001s is workaround for transition bug of gtk+ 3.22
     // see https://bugzilla.gnome.org/show_bug.cgi?id=774064
     transition: background-color 0.00001s $longer_duration, color $longer_duration $deceleration_curve;
-    animation: header_ripple_effect $longer_duration $deceleration_curve;
+    animation: header_ripple_effect $shorter_duration $deceleration_curve;
     box-shadow: inset 0 1px $alt_highlight_color, inset 0 -1px $border_color;
     background-color: $primary_color;
     color: $inverse_fg_color;
@@ -2336,7 +2323,7 @@ switch {
 
   &:checked slider {
 //    transition: $shorter_duration, $shadow_transition, margin 0;
-//    animation: needs_attention $longer_duration $deceleration_curve;
+//    animation: needs_attention $shorter_duration $deceleration_curve;
     background-color: $accent_color;
     color: $inverse_fg_color;
     background-image: -gtk-scaled(url('assets/switch-slider-checked#{$asset_suffix}.png'),
@@ -2344,7 +2331,6 @@ switch {
   }
 
   &:disabled slider { background-color: $alt_base_color; }
-
   &:checked:disabled slider { animation: none; background-color: mix($base_color, $accent_color, 50%); }
 
   row:selected & {
@@ -2467,9 +2453,7 @@ radio {
     &:dir(rtl) { margin-left: 8px; }
 
     &:not(:checked):not(:indeterminate):not(:disabled):not(:hover) { color: $secondary_fg_color; }
-
     &:hover, &:checked:hover, &:indeterminate:hover { color: $inverse_fg_color; }
-
     &:disabled { color: $inverse_disabled_fg_color; }
 
     &, &:hover, &:disabled {
@@ -2535,7 +2519,6 @@ menu menuitem check {
   -gtk-icon-source: -gtk-recolor(url("assets/scalable/small-checkbox-unchecked-symbolic.svg"));
 
   &:checked { -gtk-icon-source: -gtk-recolor(url("assets/scalable/small-checkbox-checked-symbolic.svg")); }
-
   &:indeterminate { -gtk-icon-source: -gtk-recolor(url("assets/scalable/small-checkbox-mixed-symbolic.svg")); }
 }
 
@@ -2547,7 +2530,6 @@ menu menuitem radio {
   -gtk-icon-source: -gtk-recolor(url("assets/scalable/small-radio-unchecked-symbolic.svg"));
 
   &:checked { -gtk-icon-source: -gtk-recolor(url("assets/scalable/small-radio-checked-symbolic.svg")); }
-
   &:indeterminate { -gtk-icon-source: -gtk-recolor(url("assets/scalable/small-radio-mixed-symbolic.svg")); }
 }
 
@@ -2588,7 +2570,6 @@ treeview.view radio {
     box-shadow: inset 0 0 0 9999px gtkalpha($fg_color, 0.05);
 
     &:disabled { box-shadow: none; }
-
     &:selected { box-shadow: inset 0 0 0 9999px gtkalpha($inverse_fg_color, 0.05); }
   }
 
@@ -2596,11 +2577,8 @@ treeview.view radio {
     color: $secondary_fg_color;
 
     &:hover, &:active { color: $fg_color; }
-
     &:disabled { color: $disabled_secondary_fg_color; }
-
     &:checked, &:indeterminate { color: $accent_color; }
-
     &:checked:disabled, &:indeterminate:disabled { color: $disabled_accent_color; }
   }
 }
@@ -2689,16 +2667,14 @@ scale {
     }
 
     &:hover { background-color: rgba($accent_color, 0.08); }
-
     &:focus { background-color: rgba($accent_color, 0.12); }
-
     &:focus:hover { background-color: rgba($accent_color, 0.16); }
 
     &:active {
       transition: background-color $shorter_duration $deceleration_curve,
                   background-size 0,
                   background-image 0;
-      animation: scale_ripple_effect $longer_duration $deceleration_curve forwards;
+      animation: scale_ripple_effect $shorter_duration $deceleration_curve forwards;
       background-size: auto, 0% 0%;
       background-color: rgba($accent_color, 0.08);
       color: rgba($accent_color, 0.12);
@@ -2946,22 +2922,16 @@ scrolledwindow {
   // draws a box on top of the content, the size changes programmatically.
   @at-root overshoot {
     &.top { @include overshoot(top); }
-
     &.bottom { @include overshoot(bottom); }
-
     &.left { @include overshoot(left); }
-
     &.right { @include overshoot(right); }
   }
 
   // Overflow indication, works similarly to the overshoot, the size if fixed tho.
   @at-root undershoot {
     &.top { @include undershoot(top); }
-
     &.bottom { @include undershoot(bottom); }
-
     &.left { @include undershoot(left); }
-
     &.right { @include undershoot(right); }
   }
 
@@ -3028,7 +2998,7 @@ row {
       transition: $row_transition,
                   background-size 0,
                   background-image 0;
-      animation: ripple_effect $longer_duration $deceleration_curve forwards;
+      animation: ripple_effect $shorter_duration $deceleration_curve forwards;
       box-shadow: inset 0 0 0 9999px $semi_fill_color;
       background-image: radial-gradient(circle farthest-corner at center,
                                         $semi_fill_color 10%,
@@ -3072,20 +3042,17 @@ expander {
     -gtk-icon-transform: rotate(-90deg);
 
     &:dir(rtl) { -gtk-icon-transform: rotate(90deg); }
-
     &:checked { -gtk-icon-transform: unset; }
 
     color: $secondary_fg_color;
 
     &:hover, &:active { color: $fg_color; }
-
     &:disabled { color: $disabled_secondary_fg_color; }
 
     &:selected {
       color: $inverse_secondary_fg_color;
 
       &:hover, &:active { color: $inverse_fg_color; }
-
       &:disabled { color: $inverse_disabled_secondary_fg_color; }
     }
   }
@@ -3293,7 +3260,6 @@ stacksidebar {
   color: rgba($primary_color, 0.75);
 
   &:hover, &:active { color: $primary_color; }
-
   &:disabled { color: rgba($primary_color, 0.35); }
 
   &:checked {
@@ -3344,7 +3310,6 @@ placessidebar {
 
     @at-root button.sidebar-button {
       @extend %simple_flat_button;
-
       @extend %small_button;
 
       row:selected & { @extend %button_selected.flat; }
@@ -3376,7 +3341,6 @@ placessidebar {
 
 placesview {
   .server-list-button > image { -gtk-icon-transform: rotate(0turn); }
-
   .server-list-button:checked > image { -gtk-icon-transform: rotate(-0.5turn); }
 
   // this selects the "connect to server" label
@@ -3457,11 +3421,8 @@ infobar {
   border-style: none;
 
   &.info { background-color: $info_bg_color; }
-
   &.question { background-color: $question_bg_color; }
-
   &.warning { background-color: $warning_bg_color; }
-
   &.error { background-color: $error_bg_color; }
 
   &.info,
