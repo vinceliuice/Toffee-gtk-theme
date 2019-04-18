@@ -1976,10 +1976,11 @@ menu,
 .context-menu {
   margin: 4px 0;
   padding: 4px 0;
-  box-shadow: inset 0 1px rgba(255, 255, 255, 0.4);
-  background-color: white;
-  border: 1px solid rgba(0, 0, 0, 0.08);
+  box-shadow: inset 0 1px rgba(255, 255, 255, 0.1);
+  background-color: #3f3f3f;
+  border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 5px;
+  color: rgba(255, 255, 255, 0.7);
 }
 
 .csd menu, .csd
@@ -2016,7 +2017,7 @@ menu menuitem:hover accelerator,
 menu menuitem:disabled,
 .menu menuitem:disabled,
 .context-menu menuitem:disabled {
-  color: rgba(0, 0, 0, 0.38);
+  color: rgba(255, 255, 255, 0.3);
 }
 
 menu menuitem arrow,
@@ -2054,15 +2055,15 @@ menu > arrow,
   min-height: 16px;
   min-width: 16px;
   padding: 4px;
-  background-color: #fcfcfc;
-  color: rgba(0, 0, 0, 0.54);
+  background-color: #3f3f3f;
+  color: rgba(255, 255, 255, 0.7);
 }
 
 menu > arrow.top,
 .menu > arrow.top,
 .context-menu > arrow.top {
   margin-top: -4px;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 2px 2px 0 0;
   -gtk-icon-source: -gtk-icontheme("pan-up-symbolic");
 }
@@ -2071,7 +2072,7 @@ menu > arrow.bottom,
 .menu > arrow.bottom,
 .context-menu > arrow.bottom {
   margin-bottom: -12px;
-  border-top: 1px solid rgba(0, 0, 0, 0.08);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 0 0 2px 2px;
   -gtk-icon-source: -gtk-icontheme("pan-down-symbolic");
 }
@@ -2079,8 +2080,8 @@ menu > arrow.bottom,
 menu > arrow:hover,
 .menu > arrow:hover,
 .context-menu > arrow:hover {
-  background-image: image(rgba(0, 0, 0, 0.12));
-  color: rgba(0, 0, 0, 0.75);
+  background-image: image(rgba(255, 255, 255, 0.12));
+  color: #FFFFFF;
 }
 
 menu > arrow:disabled,
@@ -2098,11 +2099,17 @@ menu separator,
 }
 
 menuitem accelerator {
-  color: rgba(0, 0, 0, 0.54);
+  color: rgba(255, 255, 255, 0.7);
 }
 
 menuitem:disabled accelerator {
-  color: rgba(0, 0, 0, 0.26);
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.popup:not(.csd) menu {
+  border-radius: 0;
+  color: #212121;
+  background-color: #fcfcfc;
 }
 
 .popup:not(.csd) menu menuitem {
@@ -2928,6 +2935,7 @@ switch {
   border-radius: 9999px;
   background-color: rgba(0, 0, 0, 0.26);
   background-clip: padding-box;
+  color: transparent;
   font-size: 0;
 }
 
@@ -2937,6 +2945,7 @@ switch:disabled {
 
 switch:checked {
   background-color: rgba(93, 125, 251, 0.35);
+  color: transparent;
 }
 
 switch:checked:disabled {
@@ -2952,7 +2961,7 @@ switch slider {
   -gtk-outline-radius: 9999px;
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.06), 0 1px 2px rgba(0, 0, 0, 0.1);
   background-color: #fcfcfc;
-  color: rgba(0, 0, 0, 0.75);
+  color: transparent;
   background-position: center;
   background-repeat: no-repeat;
   background-image: -gtk-scaled(url("assets/switch-slider-unchecked.png"), url("assets/switch-slider-unchecked@2.png"));
@@ -2963,8 +2972,9 @@ switch:hover slider {
 }
 
 switch:checked slider {
+  transition: 100ms, box-shadow 100ms cubic-bezier(0, 0, 0.2, 1), margin 0;
   background-color: #5D7DFB;
-  color: #FFFFFF;
+  color: transparent;
   background-image: -gtk-scaled(url("assets/switch-slider-checked.png"), url("assets/switch-slider-checked@2.png"));
 }
 
@@ -5348,6 +5358,17 @@ button.emoji-section:last-child {
   box-shadow: inset 2px 0 3px -3px rgba(0, 0, 0, 0.05), inset 3px 0 5px -3px rgba(0, 0, 0, 0.05), inset 3px 0 10px -3px rgba(0, 0, 0, 0.03);
 }
 
+.nautilus-window headerbar .path-bar-box .linked.nautilus-path-bar button.text-button,
+.nautilus-window headerbar .path-bar-box .linked.nautilus-path-bar button.image-button.text-button {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.nautilus-window headerbar .path-bar-box .linked.nautilus-path-bar button.text-button:not(:only-child):last-child,
+.nautilus-window headerbar .path-bar-box .linked.nautilus-path-bar button.image-button.text-button:not(:only-child):last-child {
+  border-image: radial-gradient(circle closest-corner at center calc(100% - 1px), #5D7DFB 100%, transparent 0%) 0 0 2/0 0 2px;
+}
+
 .nautilus-window headerbar .path-bar-box.background.frame {
   border: none;
   background-color: transparent;
@@ -6782,6 +6803,84 @@ window.background:not(.csd) > window.background > menu > separator {
   background-color: transparent;
 }
 
+window.background.chromium {
+  background-color: #fafafa;
+  color: #565656;
+}
+
+window.background.chromium headerbar.titlebar button.titlebutton.close, window.background.chromium headerbar.titlebar button.titlebutton.maximize, window.background.chromium headerbar.titlebar button.titlebutton.minimize {
+  border: none;
+  min-width: 12px;
+  min-height: 12px;
+  padding: 0;
+  margin: 0 2px;
+}
+
+window.background.chromium headerbar.titlebar button.titlebutton.close:hover {
+  padding: 0;
+  margin: 0 2px;
+  box-shadow: none;
+}
+
+window.background.chromium headerbar.titlebar button.titlebutton.close:active, window.background.chromium headerbar.titlebar button.titlebutton.close:checked {
+  padding: 0;
+  margin: 0 2px;
+  box-shadow: none;
+}
+
+window.background.chromium button {
+  border-width: 1px;
+  border-style: solid;
+  border-color: #e6e6e6;
+}
+
+window.background.chromium entry.chromium {
+  border-image: none;
+  border: 1px solid #e6e6e6;
+}
+
+window.background.chromium entry.chromium:focus {
+  border-color: #5D7DFB;
+}
+
+window.background.chromium > textview.view {
+  background-color: #fafafa;
+  color: #565656;
+}
+
+window.background.chromium > menubar {
+  background-color: #FFFFFF;
+}
+
+window.background.chromium > menu {
+  color: #565656;
+  background-color: #ffffff;
+  border: 1px solid #e6e6e6;
+}
+
+window.background.chromium > menu > separator, window.background.chromium > menu .separator {
+  background-color: #e6e6e6;
+  color: #e6e6e6;
+  border: none;
+}
+
+window.background.chromium > menu > menuitem {
+  color: #565656;
+}
+
+window.background.chromium > menu > menuitem:hover {
+  color: #FFFFFF;
+  background-color: #5D7DFB;
+}
+
+window.background.chromium > menu > menuitem:disabled {
+  color: rgba(86, 86, 86, 0.45);
+}
+
+window.background.chromium > menu > menuitem accelerator {
+  color: rgba(86, 86, 86, 0.45);
+}
+
 /*************
   * RhythmBox *
   *************/
@@ -7619,7 +7718,7 @@ box.vertical > stack > box.vertical .raven-background > viewport.frame list > ro
   border-color: #fafafa;
   border-radius: 4px;
   box-shadow: 0 2px 2px rgba(0, 0, 0, 0.12), 0 3px 3px rgba(0, 0, 0, 0.06);
-  background-color: white;
+  background-color: #3f3f3f;
 }
 
 .budgie-popover .container {

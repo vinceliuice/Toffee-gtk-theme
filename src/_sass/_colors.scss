@@ -63,7 +63,10 @@ $solid_panel_bg_color:   if($titlebar == 'dark', $grey_900, $grey_900);
 $opaque_panel_bg_color:  if($titlebar == 'dark', $grey_900, $grey_900); // for Unity panel which cannot use translucent colors
 
 $gdm_bg_color:  if($variant == 'light', $grey_800, $grey_900);
-$menu_bg_color: if($variant == 'light', $white, $lighter_bg_color);
+$menu_bg_color: if($variant == 'light', $grey_850, $lighter_bg_color);
+$menu_fg_color: rgba($white, 0.7);
+$menu_disabled_fg: rgba($white, 0.3);
+$menu_border_color: rgba($white, 0.1);
 
 $fill_color:      gtkalpha(currentColor, $lower_opacity);
 $semi_fill_color: gtkalpha(currentColor, $lower_opacity / 2);

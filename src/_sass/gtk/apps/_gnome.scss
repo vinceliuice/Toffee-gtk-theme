@@ -51,8 +51,23 @@
   .path-bar-box { // Fixed nautilus 3.30 pathbar
     button { @extend %pathbar_box_button; }
 
+    .linked.nautilus-path-bar { // for ≥ 3.31.90
+      button.text-button,
+      button.image-button.text-button {
+        margin-top: 0;
+        margin-bottom: 0;
+
+        &:not(:only-child):last-child {
+          border-image: radial-gradient(circle closest-corner at center calc(100% - 1px),
+                                        $primary_color 100%,
+                                        transparent 0%)
+                                        0 0 2 / 0 0 2px;
+        }
+      }
+    }
+
     &.width-maximized {
-//      button { @extend %pathbar_box_button; }
+      // button { @extend %pathbar_box_button; }
     }
 
     // workaround for 3.30.1
