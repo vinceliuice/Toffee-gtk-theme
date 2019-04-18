@@ -1602,6 +1602,7 @@ menu,
     padding: 4px 8px;
     font: initial;
     text-shadow: none;
+    color: $menu_fg_color;
 
     &:hover {
       transition: none;
@@ -1657,8 +1658,8 @@ menu,
     }
 
     &:hover {
-      background-image: image($inverse_divider_color);
-      color: $inverse_fg_color;
+      background-image: if($titlebar == 'dark', image($inverse_divider_color), image($divider_color));
+      color: if($titlebar == 'dark', $inverse_fg_color, $fg_color);
     }
 
     &:disabled {

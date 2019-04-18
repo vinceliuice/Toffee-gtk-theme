@@ -930,7 +930,7 @@ spinbutton:not(.vertical) button, notebook > header tab button.flat, button.side
 
 .stack-switcher > button.needs-attention > label,
 .stack-switcher > button.needs-attention > image, stacksidebar row.needs-attention > label {
-  animation: needs_attention 100ms cubic-bezier(0, 0, 0.2, 1) forwards;
+  animation: needs_attention 225ms cubic-bezier(0, 0, 0.2, 1) forwards;
   background-repeat: no-repeat;
   background-position: right 3px;
   background-size: 6px 6px;
@@ -1400,7 +1400,7 @@ headerbar button.destructive-action:disabled {
 .selection-mode.titlebar:not(headerbar),
 headerbar.selection-mode {
   transition: background-color 0.00001s 225ms, color 225ms cubic-bezier(0, 0, 0.2, 1);
-  animation: header_ripple_effect 100ms cubic-bezier(0, 0, 0.2, 1);
+  animation: header_ripple_effect 225ms cubic-bezier(0, 0, 0.2, 1);
   box-shadow: inset 0 1px rgba(255, 255, 255, 0.2), inset 0 -1px rgba(0, 0, 0, 0.08);
   background-color: #5D7DFB;
   color: #FFFFFF;
@@ -1976,11 +1976,11 @@ menu,
 .context-menu {
   margin: 4px 0;
   padding: 4px 0;
-  box-shadow: inset 0 1px rgba(255, 255, 255, 0.1);
-  background-color: #3f3f3f;
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: inset 0 1px rgba(0, 0, 0, 0.1);
+  background-color: #fcfcfc;
+  border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 5px;
-  color: rgba(255, 255, 255, 0.7);
+  color: rgba(0, 0, 0, 0.54);
 }
 
 .csd menu, .csd
@@ -1998,6 +1998,7 @@ menu menuitem,
   padding: 4px 8px;
   font: initial;
   text-shadow: none;
+  color: rgba(0, 0, 0, 0.54);
 }
 
 menu menuitem:hover,
@@ -2017,7 +2018,7 @@ menu menuitem:hover accelerator,
 menu menuitem:disabled,
 .menu menuitem:disabled,
 .context-menu menuitem:disabled {
-  color: rgba(255, 255, 255, 0.3);
+  color: rgba(0, 0, 0, 0.26);
 }
 
 menu menuitem arrow,
@@ -2055,15 +2056,15 @@ menu > arrow,
   min-height: 16px;
   min-width: 16px;
   padding: 4px;
-  background-color: #3f3f3f;
-  color: rgba(255, 255, 255, 0.7);
+  background-color: #fcfcfc;
+  color: rgba(0, 0, 0, 0.54);
 }
 
 menu > arrow.top,
 .menu > arrow.top,
 .context-menu > arrow.top {
   margin-top: -4px;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 2px 2px 0 0;
   -gtk-icon-source: -gtk-icontheme("pan-up-symbolic");
 }
@@ -2072,7 +2073,7 @@ menu > arrow.bottom,
 .menu > arrow.bottom,
 .context-menu > arrow.bottom {
   margin-bottom: -12px;
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 0 0 2px 2px;
   -gtk-icon-source: -gtk-icontheme("pan-down-symbolic");
 }
@@ -2080,8 +2081,8 @@ menu > arrow.bottom,
 menu > arrow:hover,
 .menu > arrow:hover,
 .context-menu > arrow:hover {
-  background-image: image(rgba(255, 255, 255, 0.12));
-  color: #FFFFFF;
+  background-image: image(rgba(0, 0, 0, 0.12));
+  color: rgba(0, 0, 0, 0.75);
 }
 
 menu > arrow:disabled,
@@ -2099,11 +2100,11 @@ menu separator,
 }
 
 menuitem accelerator {
-  color: rgba(255, 255, 255, 0.7);
+  color: rgba(0, 0, 0, 0.54);
 }
 
 menuitem:disabled accelerator {
-  color: rgba(255, 255, 255, 0.3);
+  color: rgba(0, 0, 0, 0.26);
 }
 
 .popup:not(.csd) menu {
@@ -3917,7 +3918,7 @@ scale slider:focus:hover {
 
 scale slider:active {
   transition: background-color 100ms cubic-bezier(0, 0, 0.2, 1), background-size 0, background-image 0;
-  animation: scale_ripple_effect 100ms cubic-bezier(0, 0, 0.2, 1) forwards;
+  animation: scale_ripple_effect 225ms cubic-bezier(0, 0, 0.2, 1) forwards;
   background-size: auto, 0% 0%;
   background-color: rgba(93, 125, 251, 0.08);
   color: rgba(93, 125, 251, 0.12);
@@ -4310,7 +4311,7 @@ row.activatable.has-open-popup, window#gnome-system-monitor.background.csd > box
 .has-open-popup.view, treeview.view header button.has-open-popup, .budgie-menu button.has-open-popup, row.activatable:active, window#gnome-system-monitor.background.csd > box.vertical > stack > box.vertical > scrolledwindow treeview.view:active,
 .view:active, treeview.view header button:active, .budgie-menu button:active {
   transition: all 100ms cubic-bezier(0, 0, 0.2, 1), background-color 0, color 0, background-size 0, background-image 0;
-  animation: ripple_effect 100ms cubic-bezier(0, 0, 0.2, 1) forwards;
+  animation: ripple_effect 225ms cubic-bezier(0, 0, 0.2, 1) forwards;
   box-shadow: inset 0 0 0 9999px alpha(currentColor, 0.15);
   background-image: radial-gradient(circle farthest-corner at center, alpha(currentColor, 0.15) 10%, transparent 0%);
   background-size: 0% 0%;
@@ -7718,7 +7719,7 @@ box.vertical > stack > box.vertical .raven-background > viewport.frame list > ro
   border-color: #fafafa;
   border-radius: 4px;
   box-shadow: 0 2px 2px rgba(0, 0, 0, 0.12), 0 3px 3px rgba(0, 0, 0, 0.06);
-  background-color: #3f3f3f;
+  background-color: #fcfcfc;
 }
 
 .budgie-popover .container {
